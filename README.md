@@ -1,4 +1,4 @@
 # PaperAirplane
 For developers of PaperAirplane
 
-This HP is coded by OKU FUJIYOSHI.
+This is coded by OKU FUJIYOSHI.
