@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box
+}
+
+a {
+  text-decoration: none;
+}
+
+/*header*/
+header {
+  background: #fff;
+  padding: 35px;
+}
+
+.header-logo {
+  color: #2e3131;
+  font-size: 20px;
+  font-family: 'Unica One', cursive;
+  float: left;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.header-logo:hover {
+  transform: scale(1.1)
+}
+
+.header-list {
+  float: right;
+}
+
+.header-list li {
+  list-style: none;
+  float: left;
+  color: #2e3131;
+  font-size: 20px;
+  font-family: 'Unica One', cursive;
+  padding-right: 35px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#faq {
+  color: #bdc3c7;
+}
+
+.header-list li:hover {
+  transform: scale(1.1)
+}
+/*header*/
+
+body {
+  color: #fff;
+}
+
+section {
+  text-align: center;
+  padding: 60px 0px;
+}
+
+section p {
+  color: #2e3131;
+  padding: 5px 0px;
+  margin: 0;
+}
+
+/*footer*/
+footer {
+  border-top: 1px solid #e1e4e8;
+  background: #fff;
+  padding: 50px,35px,0px,0px;
+  margin-right: 200px;
+  margin-left: 200px;
+
+}
+
+.footer-list {
+  text-align: center;
+  padding: 35px;
+}
+
+.footer-list li {
+  display: inline-block;
+  list-style: none;
+  color: #2e3131;
+  font-size: 15px;
+  font-family: 'Unica One', cursive;
+  padding-right: 35px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.footer-list li:hover {
+  transform: scale(1.1)
+}
+
+.footer-list p {
+  color: #2e3131;
+  font-size: 10px;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+/*footer*/
