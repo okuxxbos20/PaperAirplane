@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT US</title>
+  <link rel="stylesheet" href="/css/aboutus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#edeff5",
+        "text": "#838391"
+      },
+      "button": {
+        "background": "transparent",
+        "text": "#4b81e8",
+        "border": "#4b81e8"
+      }
+    },
+    "content": {
+      "message": "ユーザーエクスペリエンス向上のためにcookieを使用しています"
+    }
+  })});
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <a href="/"><div class="header-logo">HOME</div></a>
+  <div class="header-list">
+    <ul>
+      <a href="/product.html"><li>PRODUCT</li></a>
+      <a href="/aboutus.html"><li id="aboutus">ABOUT US</li></a>
+      <a href="/faq.html"><li>FAQ</li></a>
+      <a href="/howto.html"><li>HOW TO</li></a>
+    </ul>
+  </div>
+</header>
+
+<div class="testimonial-section">
+  <div class="inner-width">
+    <h1>ABOUT US</h1>
+    <div class="border"></div>
+    <div class="slides owl-carousel">
+
+      <div class="testimonial">
+        <div class="test-info">
+          <a href="https://twitter.com/okuxxbos20" target="_blank"><img class="test-pic" src="img/oku.jpeg" alt="oku"></a>
+          <a href="https://twitter.com/okuxxbos20" target="_blank"><div class="test-name">
+            <span>Developer01</span>
+            @okuxxbos20
+          </div></a>
+        </div>
+        <p>we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="test-info">
+          <a href="https://twitter.com/hrtshu" target="_blank"><img class="test-pic" src="img/shuhei.jpeg" alt="shuhei"></a>
+          <a href="https://twitter.com/hrtshu" target="_blank"><div class="test-name">
+            <span>Develper02</span>
+            @hrtshu
+          </div></a>
+        </div>
+        <p>we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="test-info">
+          <a href="https://twitter.com/hrtshu" target="_blank"><img class="test-pic" src="img/hayakawa.jpg" alt="hayakawa"></a>
+          <a href="https://twitter.com/hrtshu" target="_blank"><div class="test-name">
+            <span>Develper03</span>
+            @hayakawa
+          </div></a>
+        </div>
+        <p>we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.we are developers.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-list">
+    <ul class="footer-list">
+      <a href="/product.html"><li>PRODUCT</li></a>
+      <a href="/aboutus.html"><li>ABOUT US</li></a>
+      <a href="/faq.html"><li>FAQ</li></a>
+      <a href="/howto.html"><li>HOW TO</li></a>
+    </ul>
+    <p>©︎ PaperAirplane</p>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  $(".owl-carousel").owlCarousel({
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+      0:{
+        items:1
+      },
+      680:{
+        items:2
+      },
+      980:{
+        items:3
+      }
+    }
+  });
+</script>
+</body>
+</html>
