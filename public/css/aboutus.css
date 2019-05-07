@@ -163,4 +163,20 @@ footer {
   font-family: 'Open Sans', sans-serif;
 }
 
+.footer-sns i {
+  font-size: 25px;
+  padding-left: 0px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #abb7b7;
+  padding-left: 30px;
+}
+
+.footer-sns a {
+  text-decoration: none;
+}
+
+.footer-sns i:hover {
+  transform: scale(1.1)
+}
 /*footer*/
