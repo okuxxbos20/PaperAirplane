@@ -69,26 +69,32 @@ section p {
 
 /*footer*/
 footer {
-  border-top: 1px solid #e1e4e8;
   background: #fff;
-  padding: 50px,35px,0px,0px;
-  margin-right: 200px;
-  margin-left: 200px;
-
+  margin: auto;
 }
 
 .footer-list {
+  border-top: 1px solid #e1e4e8;
+  margin-right: 200px;
+  margin-left: 200px;
   text-align: center;
-  padding: 35px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.footer-list ul {
+  margin-bottom: 20px;
 }
 
 .footer-list li {
   display: inline-block;
   list-style: none;
   color: #2e3131;
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'Unica One', cursive;
   padding-right: 35px;
+  padding-bottom: 20px;
+  left: 50%;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -99,18 +105,19 @@ footer {
 
 .footer-list p {
   color: #2e3131;
-  font-size: 10px;
+  text-align: center;
+  font-size: 15px;
   padding-top: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .footer-sns i {
   font-size: 25px;
-  padding-left: 0px;
   cursor: pointer;
   transition: 0.4s;
   color: #abb7b7;
-  padding-left: 30px;
+  padding-right: 30px;
+  left: 50%;
 }
 
 .footer-sns a {
@@ -121,3 +128,9 @@ footer {
   transform: scale(1.1)
 }
 /*footer*/
+
+@media (max-width:730px) {
+  .footer-list {
+    margin: 0 50px 0;
+  }
+}
