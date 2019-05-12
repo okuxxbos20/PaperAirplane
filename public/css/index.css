@@ -47,20 +47,48 @@ header {
   transform: scale(1.1)
 }
 /*header*/
-
-body {
-  color: #fff;
+.middle {
+  height: auto;
+  padding: 60px 0;
+  margin-bottom: 170px;
 }
 
-section {
-  text-align: center;
-  padding: 60px 0px;
-}
-
-section p {
+.phrase {
   color: #2e3131;
-  padding: 5px 0px;
-  margin: 0;
+  margin: 100px 0 150px;
+}
+
+.phrase li {
+  list-style: none;
+  margin-top: 100px;
+  margin-left: 30px;
+  margin-right: 170px;
+  float: right;
+}
+
+.phrase h1 {
+  font-size: 50px;
+}
+
+.phrase img {
+  margin-left: 180px;
+}
+
+@media (max-width:730px) {
+  .phrase img {
+    margin: 60px;
+    text-align: center;
+  }
+
+  .middle {
+    margin-bottom: 100px;
+  }
+
+  .phrase li {
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+
 }
 
 /*footer*/
@@ -71,6 +99,7 @@ footer {
 
 .footer-list {
   border-top: 1px solid #e1e4e8;
+  margin-top: 100px;
   margin-right: 200px;
   margin-left: 200px;
   text-align: center;
