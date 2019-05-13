@@ -51,20 +51,51 @@ header {
   transform: scale(1.1)
 }
 /*header*/
-
-body {
-  color: #fff;
+.middle {
+  height: 200px;
+  margin: 0px 50px 600px;
+  padding: 100px 30px;
 }
 
-section {
+.middle h1 {
   text-align: center;
-  padding: 60px 0px;
+  color: #2e3131;
+  font-size: 24px;
+  font-family: 'Unica One', cursive;
 }
 
-section p {
-  color: #2e3131;
-  padding: 5px 0px;
-  margin: 0;
+.middle i {
+  color: #abb7b7;
+  font-size: 70px;
+  padding-bottom: 20px;
+}
+
+.contents {
+  width: 33%;
+  text-align: center;
+  float: left;
+  padding: 100px 20px;
+}
+
+.contents h2 {
+  padding-bottom: 15px;
+}
+
+.contents p {
+  color: #495057;
+}
+
+@media (max-width:730px) {
+  .middle {
+    margin-bottom: 1200px;
+  }
+
+  .contents {
+    width: 100%;
+    text-align: center;
+    float: left;
+    padding: 100px 20px 0px;
+  }
 }
 
 /*footer*/

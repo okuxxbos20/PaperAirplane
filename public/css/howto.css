@@ -72,6 +72,10 @@ header {
   border-bottom: 1px solid #bdc3c7;
 }
 
+.slides p {
+  color: #495057;
+}
+
 .middle h1 {
   text-align: center;
   color: #2e3131;
@@ -142,7 +146,6 @@ footer {
   transform: scale(1.1)
 }
 /*footer*/
-
 @media (max-width:730px) {
   .footer-list {
     margin: 0 50px 0;

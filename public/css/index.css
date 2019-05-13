@@ -49,13 +49,13 @@ header {
 /*header*/
 .middle {
   height: auto;
-  padding: 60px 0;
+  padding: 60px 0px;
   margin-bottom: 170px;
 }
 
 .phrase {
   color: #2e3131;
-  margin: 100px 0 150px;
+  margin: 100px 30px 150px;
 }
 
 .phrase li {
@@ -68,6 +68,10 @@ header {
 
 .phrase h1 {
   font-size: 50px;
+}
+
+.phrase P {
+  color:#495057;
 }
 
 .phrase img {
@@ -85,7 +89,7 @@ header {
   }
 
   .phrase li {
-    margin-top: 10px;
+    margin: 5px 0;
     padding: 0 5px;
   }
 
