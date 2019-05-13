@@ -176,7 +176,6 @@ footer {
   cursor: pointer;
   transition: 0.4s;
   color: #abb7b7;
-  padding-right: 30px;
   left: 50%;
 }
 
@@ -192,5 +191,9 @@ footer {
 @media (max-width:730px) {
   .footer-list {
     margin: 0 50px 0;
+  }
+
+  .footer-list li {
+    padding-right: 20px;
   }
 }
