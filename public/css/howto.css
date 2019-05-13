@@ -44,7 +44,7 @@ header {
 }
 
 #howto {
-  color: #bdc3c7;
+  color: #19b5fe;
 }
 
 .header-list li:hover {
@@ -69,7 +69,7 @@ header {
   font-size: 25px;
   margin-top: 36px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #bdc3c7;
+  border-bottom: 1px solid #19b5fe;
 }
 
 .slides p {
@@ -145,9 +145,10 @@ footer {
   transform: scale(1.1)
 }
 /*footer*/
+
 @media (max-width:730px) {
   .footer-list {
-    margin: 0 50px 0;
+    margin: 0 45px 0;
   }
 
   .footer-list li {

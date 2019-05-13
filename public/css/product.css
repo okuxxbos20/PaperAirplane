@@ -44,7 +44,7 @@ header {
 }
 
 #product {
-  color: #bdc3c7;
+  color: #19b5fe;
 }
 
 .header-list li:hover {
@@ -53,7 +53,7 @@ header {
 /*header*/
 .middle {
   height: 200px;
-  margin: 0px 50px 600px;
+  margin: 0px 50px 500px;
   padding: 100px 30px;
 }
 
@@ -65,7 +65,7 @@ header {
 }
 
 .middle i {
-  color: #abb7b7;
+  color: #19b5fe;
   font-size: 70px;
   padding-bottom: 20px;
 }
@@ -82,6 +82,7 @@ header {
 }
 
 .contents p {
+  text-align: left;
   color: #495057;
 }
 
@@ -94,8 +95,31 @@ header {
     width: 100%;
     text-align: center;
     float: left;
-    padding: 100px 20px 0px;
+    padding: 100px 10px 0px;
   }
+
+  .contents p {
+    float: left;
+  }
+}
+
+.download {
+  text-align: center;
+  margin: 200px 0;
+}
+
+.download a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Unica One', cursive;
+  font-size: 30px;
+  padding: 15px;
+  margin: 0 400px;
+  background: #19b5fe;
+  color: #fff;
+  transition: 0.8s;
+  display: block;
+  border-radius: 50px
 }
 
 /*footer*/
@@ -162,7 +186,7 @@ footer {
 
 @media (max-width:730px) {
   .footer-list {
-    margin: 0 50px 0;
+    margin: 0 45px 0;
   }
 
   .footer-list li {

@@ -44,7 +44,7 @@ header {
 }
 
 #aboutus {
-  color: #bdc3c7;
+  color: #19b5fe;
 }
 
 .header-list li:hover {
@@ -81,7 +81,7 @@ body {
 }
 
 .testimonial {
-  background: #e8ecf1;
+  background: #ecf0f1;
   padding: 40px;
   overflow: hidden;
   border-radius: 8px;
@@ -107,7 +107,7 @@ body {
 
 .test-name {
   font-size: 12px;
-  color: #00b5cc;
+  color: #19b5fe;
   cursor: pointer;
 }
 
@@ -190,7 +190,7 @@ footer {
 
 @media (max-width:730px) {
   .footer-list {
-    margin: 0 50px 0;
+    margin: 0 45px 0;
   }
 
   .footer-list li {
