@@ -122,6 +122,11 @@ header {
   border-radius: 50px
 }
 
+.download a:hover {
+  transform: scale(0.96);
+  color: #fff;
+}
+
 /*footer*/
 footer {
   background: #fff;
