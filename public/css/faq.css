@@ -1,140 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "montserrat",sans-serif;
-  box-sizing: border-box
+main {
+  padding: 100px 0;
 }
 
-a {
-  text-decoration: none;
+main h1 {
+  font-size: 24px;
 }
 
-/*header*/
-header {
-  background: #fff;
-  padding: 35px;
+.slides {
+  padding-top: 25px;
+  margin-bottom: 18px;
 }
 
-.header-logo {
-  color: #2e3131;
-  font-size: 20px;
-  font-family: 'Unica One', cursive;
-  float: left;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.header-logo:hover {
-  transform: scale(1.1)
-}
-
-.header-list {
-  float: right;
-}
-
-.header-list li {
-  list-style: none;
-  float: left;
-  color: #2e3131;
-  font-size: 20px;
-  font-family: 'Unica One', cursive;
-  padding-right: 35px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-#faq {
-  color: #19b5fe;
-}
-
-.header-list li:hover {
-  transform: scale(1.1)
-}
-/*header*/
-
-body {
-  color: #fff;
-}
-
-section {
-  text-align: center;
-  padding: 60px 0px;
-}
-
-section p {
-  color: #2e3131;
-  padding: 5px 0px;
-  margin: 0;
-}
-
-/*footer*/
-footer {
-  background: #fff;
-  margin: auto;
-}
-
-.footer-list {
-  border-top: 1px solid #e1e4e8;
-  margin-top: 100px;
-  margin-right: 200px;
-  margin-left: 200px;
-  text-align: center;
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-
-.footer-list ul {
-  margin-bottom: 20px;
-}
-
-.footer-list li {
-  display: inline-block;
-  list-style: none;
-  color: #2e3131;
-  font-size: 16px;
-  font-family: 'Unica One', cursive;
-  padding-right: 35px;
-  padding-bottom: 20px;
-  left: 50%;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.footer-list li:hover {
-  transform: scale(1.1)
-}
-
-.footer-list p {
-  color: #2e3131;
-  text-align: center;
-  font-size: 15px;
-  padding-top: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.footer-sns i {
+.slides h2 {
+  display: flex;
+  padding-bottom: 5px;
   font-size: 25px;
-  cursor: pointer;
-  transition: 0.4s;
-  color: #abb7b7;
-  left: 50%;
+  margin-top: 36px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #19b5fe;
 }
 
-.footer-sns a {
-  text-decoration: none;
-}
-
-.footer-sns i:hover {
-  transform: scale(1.1)
-}
-/*footer*/
-
-@media (max-width:730px) {
-  .footer-list {
-    margin: 0 45px 0;
-  }
-
-  .footer-list li {
-    padding-right: 20px;
-  }
+.slides p {
+  color: #495057;
 }
