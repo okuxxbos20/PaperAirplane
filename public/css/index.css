@@ -13,9 +13,21 @@ main .btn {
 }
 
 main .btn-howto {
-  background-color: #19b5fe;
+  background: #19b5fe;
+  transition: 0.3s;
+}
+
+main .btn-howto:hover {
+  transform:scale(1.025);
+  color: #fff;
 }
 
 main .btn-install {
-  background-color: #3bb4c1;
+  background: #3bb4c1;
+  transition: 0.3s;
+}
+
+main .btn-install:hover {
+  transform:scale(1.025);
+  color: #fff;
 }

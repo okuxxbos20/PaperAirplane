@@ -17,15 +17,6 @@ nav {
   color: #fff;
 }
 
-.navbar-toggler-icon {
-  background-color: red;
-}
-
-.navbar-toggler {
-  border-color: #000;
-  background-color: #000000;
-}
-
 .custom-hamburger .navbar-toggler-icon {
  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -42,16 +33,12 @@ footer {
   color: #fff;
 }
 
-/* #footer {
-  border-top: 1px solid #e1e4e8;
-} */
-
-footer li {
+.main {
   cursor: pointer;
   transition: 0.4s;
 }
 
-footer li:hover {
+.main:hover {
   transform: scale(1.1)
 }
 
@@ -59,9 +46,18 @@ footer a, footer a:hover {
   color: #fff;
 }
 
+.sub {
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.sub:hover {
+  color: #6c7a89;
+}
+
 footer i {
   font-size: 25px;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 footer i:hover {
