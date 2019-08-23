@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="description" content="PaperAirplane公式サイトです。">
   <title>FAQ</title>
+  <meta name="author" content="OKU FUJIYOSHI">
   <link rel="stylesheet" href="/css/headfoot.css">
   <link rel="stylesheet" href="/css/faq.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -47,24 +48,9 @@ window.cookieconsent.initialise({
 </head>
 <body>
 <!-- header -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light custom-hamburger">
-  <a class="navbar-brand" href="index.html" style="color: #19b5fe; font-family: 'Open Sans', sans-serif;"><b>PaperAirplane</b></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #fff;">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" href="product.html">PRODUCT</a></li>
-      <li class="nav-item"><a class="nav-link" href="aboutus.html">ABOUT US</a></li>
-      <li class="nav-item"><a class="nav-link" href="faq.html" style="color: #19b5fe;">FAQ</a></li>
-      <li class="nav-item"><a class="nav-link" href="howto.html" >HOW TO</a></li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="SEARCH" aria-label="Search">
-    </form>
-  </div>
-</nav>
+<div id="template_header">
+  <header-template></header-template>
+</div>
 <!-- header -->
 <!-- main -->
 <main>
@@ -101,27 +87,18 @@ window.cookieconsent.initialise({
 </main>
 <!-- main -->
 <!-- footer -->
-<footer class="py-4">
-<div class="container text-center" id="footer">
-  <ul class="nav justify-content-center mb-3">
-    <li class="nav-item"><a class="nav-link" href="product.html">PRODUCT</a></li>
-    <li class="nav-item"><a class="nav-link" href="aboutus.html">ABOUT US</a></li>
-    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-    <li class="nav-item"><a class="nav-link" href="howto.html">HOW TO</a></li>
-  </ul>
-  <ul class="footer-sns text-center" style="padding: 0;">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter" style="margin: 0 30px;"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-  </ul>
-  <p class="pt-3"><small>Copylight &copy;2019 PaperAirplane, All Rights Reserved.</small></p>
+<div id="template_footer">
+  <footer-template></footer-template>
 </div>
-</footer>
 <!-- footer -->
-<!-- js CDN -->
+<!-- bootstrap js CDN -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- js CDN -->
+<!-- bootstrap js CDN -->
+<!-- vue.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/template.js"></script>
+<!-- vue.js CDN -->
 </body>
 </html>
