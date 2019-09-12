@@ -1,6 +1,6 @@
 $(function(){
   $('#js-target').t({
-    speed_vary: true,
+    speed_vary: false,
     mistype: false,
     caret: false,
     init:function(elm){
