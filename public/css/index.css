@@ -3,6 +3,11 @@ main h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
+main h6 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
 main p {
   color: #2e3131;
 }
