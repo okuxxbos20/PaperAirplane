@@ -49,8 +49,8 @@ Vue.component("footer-template", {
       </ul>
       <ul class="nav flex-column col-md-2">
         <li class="nav-item"><a class="nav-link main" href="#"><b>Comunity</b></a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Install</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Set up</a></li>
+        <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
+        <li class="nav-item"><a class="nav-link sub" href="#">Privacy policy</a></li>
       </ul>
     </ul>
     <ul class="footer-sns text-center mt-5" style="padding: 0;">
