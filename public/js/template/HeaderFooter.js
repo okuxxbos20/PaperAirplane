@@ -50,13 +50,14 @@ Vue.component("footer-template", {
       <ul class="nav flex-column col-md-2">
         <li class="nav-item"><a class="nav-link main" href="#"><b>Comunity</b></a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Privacy policy</a></li>
+        <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
       </ul>
     </ul>
     <ul class="footer-sns text-center mt-5" style="padding: 0;">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter" style="margin: 0 30px;"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f" style="margin-right: 30px;"></i></a>
+      <a href="#"><i class="fab fa-twitter" style="margin-right: 30px;"></i></a>
+      <a href="#"><i class="fab fa-instagram" style="margin-right: 30px;"></i></a>
+      <a href="#"><i class="fab fa-gitlab" style="margin-right: 30px;"></i></a>
     </ul>
     <p class="text-center"><small>Copylight &copy;2019 PaperAirplane, All Rights Reserved.</small></p>
   </div>
