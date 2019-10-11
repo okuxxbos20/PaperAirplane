@@ -3,7 +3,8 @@
 http://localhost:8080/
 
 ```
-$maincolor: #19B5FE(DeepSkyBlue);  
-$subcolor: #3BB4C1(IrisBlue);  
+$maincolor: #19b5fe(DeepSkyBlue);  
+$subcolor: #3bb4c1(IrisBlue);  
 $black: #2e3131(OuterSpace);  
+$white: #fff;
 ```
