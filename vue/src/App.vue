@@ -36,6 +36,10 @@ export default {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   margin-top: 100px;
 }
