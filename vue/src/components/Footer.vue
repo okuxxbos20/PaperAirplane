@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="container">
-    <ul class="nav justify-content-center mb-3 pl-5">
+    <ul class="nav justify-content-center mb-3">
       <ul class="nav flex-column col-md-2">
         <li class="nav-item"><a class="nav-link main" href="#"><b>PRODUCT</b></a></li>
         <li class="nav-item"><a class="nav-link sub" href="faq.html">FAQ</a></li>
@@ -18,7 +18,7 @@
         <li class="nav-item"><a class="nav-link sub" href="#">Set up</a></li>
       </ul>
       <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><a class="nav-link main" href="#"><b>Comunity</b></a></li>
+        <li class="nav-item"><a class="nav-link main" href="#"><b>COMUNITY</b></a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
       </ul>
@@ -47,10 +47,11 @@ export default {
 
 .footer {
   background-color: var(--subColor);
-  /* position: fixed; */
-  width: 100%;
   color: var(--white);
-  padding-top: 30px;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  padding: 30px 0 10px;
+  margin-top: 30px;
 }
 
 .main {
@@ -62,27 +63,27 @@ export default {
   transform: scale(1.1)
 }
 
-footer a, footer a:hover {
-  color: #fff;
+a, a:hover {
+  color: var(--white);
 }
 
 .sub {
   font-size: 13px;
   transition: 0.2s;
+  color: var(--white);
 }
 
 .sub:hover {
   color: #6c7a89;
 }
 
-footer i {
+.fab {
   font-size: 25px;
   transition: 0.3s;
+  color: var(--white);
 }
 
-footer i:hover {
-  color: #fff;
-  transform: scale(1.3)
+.fab:hover {
+  transform: scale(1.3);
 }
-
 </style>
