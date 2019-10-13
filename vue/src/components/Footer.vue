@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 .footer {
@@ -57,13 +57,12 @@ export default {
 .main {
   cursor: pointer;
   transition: 0.4s;
+  &:hover {
+    transform: scale(1.1)
+  }
 }
 
-.main:hover {
-  transform: scale(1.1)
-}
-
-a, a:hover {
+a {
   color: var(--white);
 }
 
@@ -71,19 +70,17 @@ a, a:hover {
   font-size: 13px;
   transition: 0.2s;
   color: var(--white);
-}
-
-.sub:hover {
-  color: #6c7a89;
+  &:hover {
+    color: #6c7a89;
+  }
 }
 
 .fab {
   font-size: 25px;
   transition: 0.3s;
   color: var(--white);
-}
-
-.fab:hover {
-  transform: scale(1.3);
+  &:hover {
+    transform: scale(1.3);
+  }
 }
 </style>

@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 .header {
@@ -55,9 +55,8 @@ export default {
 
 .item {
   transition: 0.3s;
-}
-
-.item:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 </style>

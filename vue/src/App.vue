@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 :root {
   --mainColor: #19b5fe;
   --subColor: #3bb4c1;
