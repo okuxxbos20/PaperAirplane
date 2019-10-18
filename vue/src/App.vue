@@ -3,6 +3,9 @@
     <Header/>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <div class="container">
+      <router-view/>
+    </div> -->
     <Footer/>
   </div>
 </template>
@@ -29,6 +32,8 @@ export default {
   --black: #2e3131;
   --white: #fff;
 }
+
+$mainColor: #19b5fe;
 
 #app {
   margin: 0;
