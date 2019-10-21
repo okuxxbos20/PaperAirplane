@@ -4,7 +4,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <!-- <div class="container">
-      <router-view/>
+      <router-view></router-view>
     </div> -->
     <Footer/>
   </div>
@@ -32,8 +32,10 @@ export default {
   --black: #2e3131;
   --white: #fff;
 }
-
-$mainColor: #19b5fe;
+// font we use in Jaoanese by default
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+// font we use in English by default
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 #app {
   margin: 0;
