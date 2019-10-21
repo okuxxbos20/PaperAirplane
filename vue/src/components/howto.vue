@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 </template>
 
 <script>
@@ -13,4 +13,4 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 
-</style>
+</style> -->
