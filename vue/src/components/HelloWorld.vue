@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p class="ja">日本語のフォント</p>
+    <p>日本語のフォント</p>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -43,6 +45,11 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+}
+
+.ja {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
 }
 
 ul {

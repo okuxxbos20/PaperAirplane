@@ -43,8 +43,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
 .footer {
   background-color: var(--subColor);
   color: var(--white);
