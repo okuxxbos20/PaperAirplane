@@ -51,7 +51,6 @@ export default {
 
 a {
   text-decoration: none;
-  margin: 10px;
 }
 
 .router_view {
