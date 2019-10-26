@@ -1,24 +1,15 @@
-<!-- <template>
-  <p>this is product.vue</p>
+<template>
+  <div class="">
+    <p>this is product.vue</p>
+    <p>what a day.</p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-    Header,
-    Footer
-  }
-}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 p {
-  color: red;
+  margin: 0;
 }
-</style> -->
+</style>

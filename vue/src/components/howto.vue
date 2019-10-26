@@ -1,16 +1,16 @@
-<!-- <template>
+<template>
+  <div class="">
+    <p>this is howto.vue</p>
+    <p>what a day.</p>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'Header',
-  props: {
-  }
-}
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-
-</style> -->
+p {
+  color: green;
+  margin: 0;
+}
+</style>
