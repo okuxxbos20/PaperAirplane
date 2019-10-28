@@ -1,14 +1,16 @@
 <template>
   <div class="header">
   <b-navbar toggleable="lg" type="dark">
-    <b-navbar-brand href="#" class="title"><b>PaperAirplane</b></b-navbar-brand>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-brand href="/" class="title">
+      <router-link to="/" class="title"><b>PaperAirplane</b></router-link>
+    </b-navbar-brand>
+    <b-navbar-toggle target="nav-collapse" class="hamberger"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#" class="item" active>PRODUCT</b-nav-item>
-        <b-nav-item href="#" class="item" active>ABOUT US</b-nav-item>
-        <b-nav-item href="#" class="item" active>HOW TO</b-nav-item>
-        <b-nav-item href="#" class="item" active>COMUNITY</b-nav-item>
+        <li class="nav-item"><router-link to="/product" class="nav-link main">PRODUCT</router-link></li>
+        <li class="nav-item"><router-link to="/aboutus" class="nav-link main">ABOUT US</router-link></li>
+        <li class="nav-item"><router-link to="/howto" class="nav-link main">HOW TO</router-link></li>
+        <li class="nav-item"><router-link to="/comunity" class="nav-link main">COMUNITY</router-link></li>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
@@ -40,15 +42,23 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background-color: var(--mainColor);
+  background: var(--white);
   position: fixed;
   width: 100%;
-  z-index: 10;
+  // z-index: 10;
 }
 
 .title {
   font-family: 'Open Sans', sans-serif;
-  color: var(--white);
+  color: var(--mainColor)!important;
+}
+
+.navbar-toggler {
+  color: var(--black)!important;
+}
+
+.main {
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .item {

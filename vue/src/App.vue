@@ -1,14 +1,9 @@
 <template>
   <div id="app">
     <Header/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div class="container parent">
+    <div style="height: 100px;"></div>
+    <div class="container">
       <p>-------router!!!-------</p>
-        <router-link to="/product">PRODUCT</router-link>
-        <router-link to="/aboutus">ABOUT US</router-link>
-        <router-link to="/howto">HOW TO</router-link>
-        <router-link to="/comunity">COMUNITY</router-link>
         <router-view class="router_view"></router-view>
       <p>-------router!!!-------</p>
     </div>
@@ -17,14 +12,12 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    // HelloWorld,
     Header,
     Footer
   }
@@ -51,14 +44,13 @@ export default {
 
 a {
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .router_view {
   margin: 10px;
   border: 2px solid #ccc;
-}
-
-img {
-  margin-top: 100px;
 }
 </style>

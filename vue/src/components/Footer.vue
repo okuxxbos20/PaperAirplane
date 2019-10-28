@@ -3,22 +3,22 @@
     <div class="container">
     <ul class="nav justify-content-center mb-3">
       <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><a class="nav-link main" href="#"><b>PRODUCT</b></a></li>
+        <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
         <li class="nav-item"><a class="nav-link sub" href="faq.html">FAQ</a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Blog</a></li>
       </ul>
       <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><a class="nav-link main" href="#"><b>ABOUT US</b></a></li>
+        <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Get in touch</a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Support</a></li>
       </ul>
       <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><a class="nav-link main" href="#"><b>HOW TO</b></a></li>
+        <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Install</a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Set up</a></li>
       </ul>
       <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><a class="nav-link main" href="#"><b>COMUNITY</b></a></li>
+        <li class="nav-item"><router-link to="/comunity" class="nav-link main"><b>COMUNITY</b></router-link></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
       </ul>
