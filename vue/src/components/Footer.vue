@@ -4,8 +4,8 @@
     <ul class="nav justify-content-center mb-3">
       <ul class="nav flex-column col-md-2">
         <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
-        <li class="nav-item"><a class="nav-link sub" href="faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link sub" href="#">For Presenters</a></li>
+        <li class="nav-item"><a class="nav-link sub" href="#">For Audiences</a></li>
       </ul>
       <ul class="nav flex-column col-md-2">
         <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
@@ -14,11 +14,6 @@
       </ul>
       <ul class="nav flex-column col-md-2">
         <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Install</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Set up</a></li>
-      </ul>
-      <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><router-link to="/comunity" class="nav-link main"><b>COMUNITY</b></router-link></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
         <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
       </ul>

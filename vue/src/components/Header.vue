@@ -10,7 +10,6 @@
         <li class="nav-item"><router-link to="/product" class="nav-link main">PRODUCT</router-link></li>
         <li class="nav-item"><router-link to="/aboutus" class="nav-link main">ABOUT US</router-link></li>
         <li class="nav-item"><router-link to="/howto" class="nav-link main">HOW TO</router-link></li>
-        <li class="nav-item"><router-link to="/comunity" class="nav-link main">COMUNITY</router-link></li>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
@@ -45,7 +44,7 @@ export default {
   background: var(--white);
   position: fixed;
   width: 100%;
-  // z-index: 10;
+  z-index: 10;
 }
 
 .title {
