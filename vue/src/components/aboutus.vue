@@ -1,16 +1,21 @@
 <template>
   <div class="">
-    <p>this is aboutus.vue</p>
-    <p>what a day.</p>
+    <PageTitle title="ABOUT US"/>
+    <div class="container">
+
+    </div>
   </div>
 </template>
 
 <script>
+import PageTitle from './child_components/pagetitle.vue';
+
+export default {
+  components: {
+    PageTitle
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-p {
-  color: blue;
-  margin: 0;
-}
 </style>
