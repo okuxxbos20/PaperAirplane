@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="howto">
     <PageTitle title="HOW TO"/>
     <div class="container">
       <div class="row contents">
@@ -7,8 +7,8 @@
           <h5>On this page</h5>
           <ul>
             <li><a href="#">What is the PaperAirplane??</a></li>
-            <li><a href="#">Install</a></li>
-            <li><a href="#">Set Up</a></li>
+            <li><a href="#install">Install</a></li>
+            <li><a href="#setup">Set Up</a></li>
             <li><a href="#">What is the PaperAirplane??</a></li>
             <li><a href="#">Install</a></li>
             <li><a href="#">Set Up</a></li>
@@ -22,12 +22,12 @@
           <div class="heading">
             <h3>What is the PaperAirplane?</h3>
             <p>You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.<br><br>
-            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p>
+            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p><div id="install"></div>
           </div>
           <div class="heading">
             <h3>Step.1 Install</h3>
             <p class="ja">業務システムなど、SPA（シングルページアプリケーション）の技術が主流となり、AngularとReactの両雄が主要どころではありますが、どちらも嫌いという人も少なくはありません。主な理由としては、Angularは難しくて学習コストかかるし、Reactは制限付きBSDライセンスの問題もあって会社での導入は法務部が難色を示すとかの理由で避けたいといったところでしょうか。そうなると３番手ということでVue.Jsでしょ。<br><br>
-            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p>
+            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p><div id="setup"></div>
           </div>
           <div class="heading">
             <h3>Step.2 Set Up</h3>

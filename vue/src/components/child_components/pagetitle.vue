@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 .component_name {
-  height: 150px;
+  height: 130px;
   background: var(--subColor);
   position: relative;
   margin-bottom: 33px;

@@ -48,6 +48,8 @@ export default {
 }
 
 .main {
+  padding: 8px 16px;
+  text-align: center;
   cursor: pointer;
   transition: 0.4s;
   &:hover {
@@ -60,6 +62,8 @@ a {
 }
 
 .sub {
+  padding: 8px 16px;
+  text-align: center;
   font-size: 13px;
   transition: 0.2s;
   color: var(--white);
