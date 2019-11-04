@@ -1,7 +1,8 @@
 # PaperAirplane
-For developers of PaperAirplane
+Coming soon.
 
-This is coded by OKU FUJIYOSHI.
+coded by OKU FUJIYOSHI.
+contact:@okuxxbos20
 
 # vue
 http://localhost:8080/
