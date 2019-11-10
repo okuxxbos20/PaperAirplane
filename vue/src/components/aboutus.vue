@@ -104,19 +104,14 @@ export default {
   },
   methods: {
     onType: function (event){
-      //here you can set any behavior
+      // here you can set any behavior
     },
     onMessageSubmit: function(message){
-      /*
-      * example simulating an upload callback.
-      * It's important to notice that even when your message wasn't send
-      * yet to the server you have to add the message into the array
-      */
+      // example simulating an upload callback.
+      // It's important to notice that even when your message wasn't send
+      // yet to the server you have to add the message into the array
       this.messages.push(message)
-
-      /*
-      * you can update message state after the server response
-      */
+      // you can update message state after the server response
       // timeout simulating the request
       setTimeout(() => {
         message.uploaded = true

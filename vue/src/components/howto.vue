@@ -72,9 +72,8 @@ export default {
   }
 
   .main {
-    background: var(--white);
+    background: #fbfbfb;
     padding: 20px;
-
     .heading {
       margin-bottom: 55px;
 

@@ -38,7 +38,7 @@ export default {
 #app {
   margin: 0;
   padding: 0;
-  background: var(--backGround);
+  background: var(--white);
 }
 
 a {
