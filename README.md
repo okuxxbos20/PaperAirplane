@@ -1,8 +1,7 @@
 # PaperAirplane
 Coming soon.
 
-coded by OKU FUJIYOSHI.
-contact:@okuxxbos20
+coded by @okuxxbos20
 
 # vue
 http://localhost:8080/
