@@ -16,7 +16,9 @@
         <input type="tel" class="classCode" maxlength="1">
         <input type="tel" class="classCode" maxlength="1">
       <div class="enterBtn">
-        <button type="submit">ENTER</button>
+        <router-link to="/aboutus">
+          <button type="submit">ENTER</button>
+        </router-link>
       </div>
     </div>
 

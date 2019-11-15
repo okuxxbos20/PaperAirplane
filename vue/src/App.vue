@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <!-- <Header/> -->
-    <!-- <Header02/> -->
-    <Header03/>
+    <Header02/>
+    <!-- <Header03/> -->
     <div style="height: 56px;"></div>
       <router-view></router-view>
     <Footer/>
@@ -10,16 +10,16 @@
 </template>
 
 <script>
-// import Header from './components/Header.vue';
-// import Header02 from './components/Header02.vue';
+import Header from './components/Header.vue';
+import Header02 from './components/Header02.vue';
 import Header03 from './components/Header03.vue';
 import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
   components: {
-    // Header,
-    // Header02,
+    Header,
+    Header02,
     Header03,
     Footer
   }

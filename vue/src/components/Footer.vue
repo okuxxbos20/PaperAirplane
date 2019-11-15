@@ -1,32 +1,32 @@
 <template>
-  <div class="footer">
-    <div class="container">
-    <ul class="nav justify-content-center mb-3">
-      <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">For Presenters</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">For Audiences</a></li>
-      </ul>
-      <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Get in touch</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Support</a></li>
-      </ul>
-      <ul class="nav flex-column col-md-2">
-        <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
-        <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
-      </ul>
+<div class="footer">
+  <div class="container">
+  <ul class="nav justify-content-center mb-3">
+    <ul class="nav flex-column col-md-2">
+      <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
+      <li class="nav-item"><a class="nav-link sub" href="#">For Presenters</a></li>
+      <li class="nav-item"><a class="nav-link sub" href="#">For Audiences</a></li>
     </ul>
-    <ul class="footer-sns text-center mt-5" style="padding: 0;">
-      <a href="#"><i class="fab fa-facebook-f" style="margin-right: 30px;"></i></a>
-      <a href="#"><i class="fab fa-twitter" style="margin-right: 30px;"></i></a>
-      <a href="#"><i class="fab fa-instagram" style="margin-right: 30px;"></i></a>
-      <a href="#"><i class="fab fa-gitlab" style="margin-right: 30px;"></i></a>
+    <ul class="nav flex-column col-md-2">
+      <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
+      <li class="nav-item"><a class="nav-link sub" href="#">Get in touch</a></li>
+      <li class="nav-item"><a class="nav-link sub" href="#">Support</a></li>
     </ul>
-    <p class="text-center mb-0"><small>Copylight &copy;2019 PaperAirplane, All Rights Reserved.</small></p>
+    <ul class="nav flex-column col-md-2">
+      <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
+      <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
+      <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
+    </ul>
+  </ul>
+  <ul class="footer-sns text-center mt-5" style="padding: 0;">
+    <a href="#"><i class="fab fa-facebook-f" style="margin-right: 30px;"></i></a>
+    <a href="#"><i class="fab fa-twitter" style="margin-right: 30px;"></i></a>
+    <a href="#"><i class="fab fa-instagram" style="margin-right: 30px;"></i></a>
+    <a href="#"><i class="fab fa-gitlab" style="margin-right: 30px;"></i></a>
+  </ul>
+  <p class="text-center mb-0"><small>Copylight &copy;2019 PaperAirplane, All Rights Reserved.</small></p>
   </div>
-  </div>
+</div>
 </template>
 
 <script>
