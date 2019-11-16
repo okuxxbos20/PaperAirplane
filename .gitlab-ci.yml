@@ -6,6 +6,6 @@ pages:
   - echo 'Nothing to do...'
   artifacts:
     paths:
-    - public
+    - vue/dist
   only:
   - master
