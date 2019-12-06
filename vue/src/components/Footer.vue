@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  color: var(--white);
+}
+
 .footer {
   background-color: var(--subColor);
   color: var(--white);
@@ -45,39 +49,32 @@ export default {
   width: 100%;
   padding: 30px 0 10px;
   margin-top: 30px;
-}
-
-.main {
-  padding: 8px 16px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.4s;
-  &:hover {
-    transform: scale(1.1)
+  .main {
+    padding: 8px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      transform: scale(1.1)
+    }
   }
-}
-
-a {
-  color: var(--white);
-}
-
-.sub {
-  padding: 8px 16px;
-  text-align: center;
-  font-size: 13px;
-  transition: 0.2s;
-  color: var(--white);
-  &:hover {
-    color: #6c7a89;
+  .sub {
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 13px;
+    transition: 0.2s;
+    color: var(--white);
+    &:hover {
+      color: #6c7a89;
+    }
   }
-}
-
-.fab {
-  font-size: 25px;
-  transition: 0.3s;
-  color: var(--white);
-  &:hover {
-    transform: scale(1.3);
+  .fab {
+    font-size: 25px;
+    transition: 0.3s;
+    color: var(--white);
+    &:hover {
+      transform: scale(1.3);
+    }
   }
 }
 </style>
