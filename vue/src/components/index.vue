@@ -11,10 +11,12 @@
 
     <div class="enterYourClass">
       <h6>Enter Your Class Code.</h6>
-        <input type="tel" class="classCode" maxlength="1">
-        <input type="tel" class="classCode" maxlength="1">
-        <input type="tel" class="classCode" maxlength="1">
-        <input type="tel" class="classCode" maxlength="1">
+        <div id="app">
+          <input type="tel" class="classCode" id="code1" maxlength="1">
+          <input type="tel" class="classCode" id="code2" maxlength="1">
+          <input type="tel" class="classCode" id="code3" maxlength="1">
+          <input type="tel" class="classCode" id="code4" maxlength="1">
+        </div>
       <div class="enterBtn">
         <router-link to="/aboutus">
           <button type="submit">ENTER</button>
@@ -30,6 +32,31 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+
+    // func() {
+    //   var code1 = document.getElementById('code1');
+    //   var code2 = document.getElementById('code2');
+    //   var check1 = code1.value.length;
+    //   var check2 = code2.value.length;
+    //   var isNext1 = false;
+    //   var isNext2 = false;
+    //
+    //   if (check1 >= 1) {
+    //     isNext1 = true;
+    //   }
+    //   console.log(check1);
+    //   console.log(isNext1);
+    //
+    //   if (isNext1) {
+    //     code2.focus();
+    //     console.log("YES");
+    //   }
+    //
+    //   console.log(check2);
+    //   console.log(isNext2);
+    // }
   }
 }
 </script>
@@ -37,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 .index {
   text-align: center;
-  .howtoAndInstall{
+  .howtoAndInstall {
     img {
       height: 200px;
       width: 200px;
@@ -95,6 +122,7 @@ export default {
       color: var(--mainColor);
       border: 4px solid var(--mainColor);
       margin: 2px;
+      text-align: center;
       @media screen and (max-width: 320px) {
         width: 60px;
         height: 60px;
