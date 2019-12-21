@@ -4,8 +4,8 @@
   <ul class="nav justify-content-center mb-3">
     <ul class="nav flex-column col-md-2">
       <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
-      <li class="nav-item"><a class="nav-link sub" href="#">For Presenters</a></li>
-      <li class="nav-item"><a class="nav-link sub" href="#">For Audiences</a></li>
+      <li class="nav-item"><router-link to="/product-presenters" class="nav-link sub">For Presenters</router-link></li>
+      <li class="nav-item"><router-link to="/product-audience" class="nav-link sub">For Audiences</router-link></li>
     </ul>
     <ul class="nav flex-column col-md-2">
       <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
