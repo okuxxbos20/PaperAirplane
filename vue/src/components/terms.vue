@@ -2,7 +2,6 @@
   <div class="">
     <PageTitle title="TERMS"/>
     <div class="container">
-      <p>terms contents below</p>
     </div>
   </div>
 </template>

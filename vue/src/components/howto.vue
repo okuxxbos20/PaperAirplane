@@ -3,39 +3,20 @@
     <PageTitle title="HOW TO"/>
     <div class="container">
       <div class="row contents">
+
         <div class="side col-md-3">
-          <h5>On this page</h5>
+          <h5>OnThisPage</h5>
           <ul>
-            <li><a href="#">What is the PaperAirplane??</a></li>
-            <li><a href="#install">Install</a></li>
-            <li><a href="#setup">Set Up</a></li>
-            <li><a href="#">What is the PaperAirplane??</a></li>
-            <li><a href="#">Install</a></li>
-            <li><a href="#">Set Up</a></li>
-            <li><a href="#">What is the PaperAirplane??</a></li>
-            <li><a href="#">Install</a></li>
-            <li><a href="#">Set Up</a></li>
+            <li v-for="words in sidebar.OnThisPage">{{ words }}</li>
+          </ul>
+          <h5>Details</h5>
+          <ul>
+            <li v-for="words in sidebar.Details">{{ words }}</li>
           </ul>
         </div>
-        <div class="main col-md-9 shadow-sm">
 
-          <div class="heading">
-            <h3>What is the PaperAirplane?</h3>
-            <p>You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.<br><br>
-            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p><div id="install"></div>
-          </div>
-          <div class="heading">
-            <h3>Step.1 Install</h3>
-            <p class="ja">業務システムなど、SPA（シングルページアプリケーション）の技術が主流となり、AngularとReactの両雄が主要どころではありますが、どちらも嫌いという人も少なくはありません。主な理由としては、Angularは難しくて学習コストかかるし、Reactは制限付きBSDライセンスの問題もあって会社での導入は法務部が難色を示すとかの理由で避けたいといったところでしょうか。そうなると３番手ということでVue.Jsでしょ。<br><br>
-            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p><div id="setup"></div>
-          </div>
-          <div class="heading">
-            <h3>Step.2 Set Up</h3>
-            <p>You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.<br><br>
-            You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.ou can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.You can Install it from url below.</p>
-          </div>
+        <Paper :paperTitle="sidebar"/>
 
-        </div>
       </div>
     </div>
   </div>
@@ -43,10 +24,20 @@
 
 <script>
 import PageTitle from './child_components/pagetitle.vue';
+import Paper from './child_components/paper.vue';
 
 export default {
   components: {
-    PageTitle
+    PageTitle,
+    Paper
+  },
+  data () {
+    return {
+      sidebar: {
+        OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
+        Details: ['Terms', 'Privacy', 'works']
+      }
+    };
   }
 };
 </script>
@@ -63,11 +54,12 @@ export default {
       border-bottom: 1px solid var(--border);
       color: var(--text);
     }
-    li {
-      margin: 7.5px 0;
-    }
-    a {
-      color: var(--subColor);
+    ul {
+      padding: 0 0 15px 10px;
+      li {
+        margin: 7.5px 0;
+        color: var(--subColor);
+      }
     }
   }
 

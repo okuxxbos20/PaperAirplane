@@ -3,7 +3,7 @@
     <div class="howtoAndInstall">
       <img src="../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
-      <h6 id="js-target">For Awesome Presenters.</h6>
+      <h6 id="js-target">Where We Talk.</h6>
         <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
         <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
       <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
@@ -11,15 +11,15 @@
 
     <div class="enterYourClass">
       <h6>Enter Your Class Code.</h6>
-        <div id="app">
-          <input type="tel" class="classCode" id="code1" maxlength="1">
-          <input type="tel" class="classCode" id="code2" maxlength="1">
-          <input type="tel" class="classCode" id="code3" maxlength="1">
-          <input type="tel" class="classCode" id="code4" maxlength="1">
+        <div>
+          <input type="tel" class="classCode" maxlength="1" v-model="code1">
+          <input type="tel" class="classCode" maxlength="1" v-model="code2" ref="r2">
+          <input type="tel" class="classCode" maxlength="1" v-model="code3" ref="r3">
+          <input type="tel" class="classCode" maxlength="1" v-model="code4" ref="r4">
         </div>
       <div class="enterBtn">
         <router-link to="/class">
-          <button type="submit">ENTER</button>
+          <button type="submit" ref="enter">ENTER</button>
         </router-link>
       </div>
     </div>
@@ -29,34 +29,37 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  data () {
+    var classcode = [];
+    return {code1: "", code2: "", code3: "", code4: "", classcode}
   },
-  methods: {
-
-    // func() {
-    //   var code1 = document.getElementById('code1');
-    //   var code2 = document.getElementById('code2');
-    //   var check1 = code1.value.length;
-    //   var check2 = code2.value.length;
-    //   var isNext1 = false;
-    //   var isNext2 = false;
-    //
-    //   if (check1 >= 1) {
-    //     isNext1 = true;
-    //   }
-    //   console.log(check1);
-    //   console.log(isNext1);
-    //
-    //   if (isNext1) {
-    //     code2.focus();
-    //     console.log("YES");
-    //   }
-    //
-    //   console.log(check2);
-    //   console.log(isNext2);
-    // }
+  watch: {
+    code1: function (num) {
+      if (num.length >= 1) {
+        this.$refs.r2.focus();
+        this.classcode.push(num);
+      }
+    },
+    code2: function (num) {
+      if (num.length >= 1) {
+        this.$refs.r3.focus();
+        this.classcode.push(num);
+      }
+    },
+    code3: function (num) {
+      if (num.length >= 1) {
+        this.$refs.r4.focus();
+        this.classcode.push(num);
+      }
+    },
+    code4: function (num) {
+      if (num.length >= 1) {
+        this.$refs.enter.focus();
+        this.classcode.push(num);
+        console.log(this.classcode);
+        return this.classcode;
+      }
+    },
   }
 }
 </script>

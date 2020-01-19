@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <!-- <PageTitle title="CLASS"/> -->
+    <PageTitle title="CLASS"/>
     <div class="container">
-      <p>get in touch contents below</p>
+      <p>Your entered class-code : {{ }}</p>
     </div>
   </div>
 </template>
