@@ -18,7 +18,7 @@
           <input type="tel" class="classCode" id="code4" maxlength="1">
         </div>
       <div class="enterBtn">
-        <router-link to="/aboutus">
+        <router-link to="/class">
           <button type="submit">ENTER</button>
         </router-link>
       </div>

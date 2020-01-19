@@ -9,13 +9,13 @@
     </ul>
     <ul class="nav flex-column col-md-2">
       <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
-      <li class="nav-item"><a class="nav-link sub" href="#">Get in touch</a></li>
-      <li class="nav-item"><a class="nav-link sub" href="#">Support</a></li>
+      <li class="nav-item"><router-link to="/get-in-touch" class="nav-link sub">Get in touch</router-link></li>
+      <li class="nav-item"><router-link to="/support" class="nav-link sub">Support</router-link></li>
     </ul>
     <ul class="nav flex-column col-md-2">
       <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
-      <li class="nav-item"><a class="nav-link sub" href="#">Terms</a></li>
-      <li class="nav-item"><a class="nav-link sub" href="#">Privacy</a></li>
+      <li class="nav-item"><router-link to="/terms" class="nav-link sub">Terms</router-link></li>
+      <li class="nav-item"><router-link to="/privacy" class="nav-link sub">Privacy</router-link></li>
     </ul>
   </ul>
   <ul class="footer-sns text-center mt-5" style="padding: 0;">
