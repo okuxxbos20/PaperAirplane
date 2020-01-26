@@ -7,11 +7,11 @@
         <div class="side col-md-3">
           <h5>OnThisPage</h5>
           <ul>
-            <li v-for="words in sidebar.OnThisPage">{{ words }}</li>
+            <li v-for="words in sidebar.OnThisPage" v-bind:key="words">{{ words }}</li>
           </ul>
           <h5>Details</h5>
           <ul>
-            <li v-for="words in sidebar.Details">{{ words }}</li>
+            <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
           </ul>
         </div>
 
