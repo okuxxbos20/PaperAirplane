@@ -3,7 +3,7 @@
     <div class="howtoAndInstall">
       <img src="../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
-      <h6 id="js-target">Where We Talk.</h6>
+      <h6 id="js-target">{{ subphrase[subPhrase()] }}</h6>
         <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
         <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
       <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
@@ -30,36 +30,50 @@
 <script>
 export default {
   data () {
-    var classcode = [];
-    return {code1: "", code2: "", code3: "", code4: "", classcode}
+    return {
+      subphrase: [
+        'Where We Talk.', 'For Awesome Presenters.', 'Coming soon.',
+        'Do Something Fun.', 'Go Your Way.', 'No border.'],
+      code1: "",
+      code2: "",
+      code3: "",
+      code4: "",
+      classcode: ['Ω', 'Ω', 'Ω', 'Ω']
+    }
   },
   watch: {
     code1: function (num) {
       if (num.length >= 1) {
         this.$refs.r2.focus();
-        this.classcode.push(num);
+        this.classcode[0] = num;
       }
     },
     code2: function (num) {
       if (num.length >= 1) {
         this.$refs.r3.focus();
-        this.classcode.push(num);
+        this.classcode[1] = num;
       }
     },
     code3: function (num) {
       if (num.length >= 1) {
         this.$refs.r4.focus();
-        this.classcode.push(num);
+        this.classcode[2] = num;
       }
     },
     code4: function (num) {
       if (num.length >= 1) {
         this.$refs.enter.focus();
-        this.classcode.push(num);
+        this.classcode[3] = num;
         console.log(this.classcode);
         return this.classcode;
       }
     },
+  },
+  methods: {
+    subPhrase: function() {
+      var random = Math.floor(Math.random() * this.subphrase.length);
+      return random;
+    }
   }
 }
 </script>
