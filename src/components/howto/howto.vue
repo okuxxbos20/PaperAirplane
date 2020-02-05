@@ -2,8 +2,8 @@
   <div class="howto">
     <PageTitle title="HOW TO"/>
     <div class="container">
-      <div class="row contents">
 
+      <div class="row contents">
         <div class="side col-md-3">
           <h5>OnThisPage</h5>
           <ul>
@@ -14,16 +14,15 @@
             <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
           </ul>
         </div>
-
         <Paper :paperTitle="sidebar"/>
-
       </div>
+      
     </div>
   </div>
 </template>
 
 <script>
-import PageTitle from './child_components/pagetitle.vue';
+import PageTitle from './../child_components/pagetitle.vue';
 import Paper from './child_components/paper.vue';
 
 export default {
@@ -48,7 +47,6 @@ export default {
   margin: 0;
 
   .side {
-    // border: 2px solid #ccc;
     h5 {
       padding-bottom: 5px;
       border-bottom: 1px solid var(--border);

@@ -1,14 +1,14 @@
 <template>
   <div class="">
-    <PageTitle title="GET IN TOUCH"/>
+    <PageTitle title="PRIVACY"/>
     <div class="container">
-      <p>get in touch contents below</p>
+      <p>privacy contents below</p>
     </div>
   </div>
 </template>
 
 <script>
-import PageTitle from './child_components/pagetitle.vue';
+import PageTitle from './../child_components/pagetitle.vue';
 
 export default {
   components: {

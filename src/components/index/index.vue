@@ -1,7 +1,7 @@
 <template>
   <div class="index container">
     <div class="howtoAndInstall">
-      <img src="../assets/logo_deepSkyBlue.svg" alt="logo">
+      <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
       <h6 id="js-target">{{ subphrase[subPhrase()] }}</h6>
         <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>

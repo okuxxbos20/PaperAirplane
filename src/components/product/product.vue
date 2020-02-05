@@ -1,13 +1,16 @@
 <template>
   <div class="">
-    <PageTitle title="AUDIENCE"/>
+    <PageTitle title="PRODUCT"/>
     <div class="container">
       <div class="product row">
         <div class="col-md-6">
-          <img src="../assets/audience.png" class="audience" alt="audience">
+          <img src="../../assets/audience.png" class="audience" alt="audience">
           <h5>AUDIENCE</h5>
+          <p>You can set functions for validation and react to the current validity of the input, set functions which restrict what can be typed into the input altogether and react whenever this function restricts an input value, set functions for converting the text in the input to and from a different type, apply formatting to the input value as the user types, and more.</p>
         </div>
-        <div class="col-md-6 description">
+        <div class="col-md-6">
+          <img src="../../assets/presenter.png" class="presenter" alt="presenter">
+          <h5>PRESENTER</h5>
           <p>You can set functions for validation and react to the current validity of the input, set functions which restrict what can be typed into the input altogether and react whenever this function restricts an input value, set functions for converting the text in the input to and from a different type, apply formatting to the input value as the user types, and more.</p>
         </div>
       </div>
@@ -16,7 +19,7 @@
 </template>
 
 <script>
-import PageTitle from './child_components/pagetitle.vue';
+import PageTitle from './../child_components/pagetitle.vue';
 
 export default {
   components: {
@@ -32,13 +35,10 @@ export default {
     width: 200px;
     height: auto;
   }
-  .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p {
-      color: var(--text);
-    }
+  .presenter {
+    margin-top: 160px;
+    width: 300px;
+    height: auto;
   }
   h5 {
     font-family: 'Open Sans', sans-serif;

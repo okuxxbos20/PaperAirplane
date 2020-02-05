@@ -2,12 +2,13 @@
   <div class="">
     <PageTitle title="ABOUT US"/>
     <div class="container chat">
+      there is about us. coming soon.
     </div>
   </div>
 </template>
 
 <script>
-import PageTitle from './child_components/pagetitle.vue';
+import PageTitle from './../child_components/pagetitle.vue';
 
 export default {
   components: {

@@ -1,14 +1,13 @@
 <template>
   <div class="">
-    <PageTitle title="PRIVACY"/>
+    <PageTitle title="TERMS"/>
     <div class="container">
-      <p>privacy contents below</p>
     </div>
   </div>
 </template>
 
 <script>
-import PageTitle from './child_components/pagetitle.vue';
+import PageTitle from './../child_components/pagetitle.vue';
 
 export default {
   components: {
