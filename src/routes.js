@@ -1,13 +1,17 @@
-import IndexComp from './components/index';
-import ProductComp from './components/product';
-import ProductPresenterComp from './components/product-presenters';
-import ProductAudienceComp from './components/product-audience';
-import AboutusComp from './components/aboutus';
-import HowtoComp from './components/howto';
-import TermsComp from './components/terms';
-import PrivacyComp from './components/privacy';
-import GetInTouchComp from './components/get-in-touch';
-import SupportComp from './components/support';
+import IndexComp from './components/index/index';
+//product
+import ProductComp from './components/product/product';
+import ProductPresenterComp from './components/product/product-presenters';
+import ProductAudienceComp from './components/product/product-audience';
+//aboutus
+import AboutusComp from './components/aboutus/aboutus';
+import GetInTouchComp from './components/aboutus/get-in-touch';
+import SupportComp from './components/aboutus/support';
+//howto
+import HowtoComp from './components/howto/howto';
+import TermsComp from './components/howto/terms';
+import PrivacyComp from './components/howto/privacy';
+//class
 import ClassComp from './components/class';
 
 export const routes = [{
