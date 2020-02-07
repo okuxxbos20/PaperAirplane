@@ -26,7 +26,7 @@ export default {
   --subColor: #3bb4c1;
   --backGround: #fff;
   --text: #333;
-  --footertext: #fff;
+  --footertext: #ececec;
   --border: #e7e7e7;
   --black: #2e3131;
   --white: #fff;
@@ -34,7 +34,7 @@ export default {
   // dark mode
   // --backGround: #353535;
   // --text: #ececec;
-  // --footertext: #ececec;
+  // --footertext: #353535;
   // --paperBackGround: #404040;
 }
 // font we use in Jaoanese by default

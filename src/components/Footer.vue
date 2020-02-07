@@ -2,17 +2,17 @@
 <div class="footer">
   <div>
     <ul class="nav justify-content-center mb-3">
-      <ul class="nav flex-column col-md-2">
+      <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
         <li class="nav-item"><router-link to="/product-presenters" class="nav-link sub">For Presenters</router-link></li>
         <li class="nav-item"><router-link to="/product-audience" class="nav-link sub">For Audiences</router-link></li>
       </ul>
-      <ul class="nav flex-column col-md-2">
+      <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
         <li class="nav-item"><router-link to="/get-in-touch" class="nav-link sub">Get in touch</router-link></li>
         <li class="nav-item"><router-link to="/support" class="nav-link sub">Support</router-link></li>
       </ul>
-      <ul class="nav flex-column col-md-2">
+      <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
         <li class="nav-item"><router-link to="/terms" class="nav-link sub">Terms</router-link></li>
         <li class="nav-item"><router-link to="/privacy" class="nav-link sub">Privacy</router-link></li>
@@ -64,6 +64,10 @@ a {
   width: 100%;
   padding: 30px 0 10px;
   margin-top: 30px;
+  .parent {
+    padding: 0;
+    width: 125px;
+  }
   .main {
     padding: 8px 16px;
     text-align: center;
