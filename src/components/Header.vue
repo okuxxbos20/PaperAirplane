@@ -25,13 +25,13 @@ export default {
 <style lang="scss" scoped>
 header {
   // border-bottom: 3px solid var(--mainColor);
-  background-color: var(--white);
+  background-color: var(--backGround);
   position: fixed;
   height: 67.5px;
   width: 100%;
   z-index: 3;
   ul{
-    background-color: var(--white);
+    background-color: var(--backGround);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -41,7 +41,7 @@ header {
     display: block;
     padding: 18px 30px;
     text-decoration: none;
-    color: rgba(0, 0, 0, .6);
+    color: var(--text);
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     transition: .15s;

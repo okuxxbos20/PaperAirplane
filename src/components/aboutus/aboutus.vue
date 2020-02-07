@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="main">
     <PageTitle title="ABOUT US"/>
     <div class="container chat">
       there is about us. coming soon.
@@ -18,4 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

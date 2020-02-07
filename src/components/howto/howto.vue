@@ -16,7 +16,7 @@
         </div>
         <Paper :paperTitle="sidebar"/>
       </div>
-      
+
     </div>
   </div>
 </template>
@@ -45,7 +45,6 @@ export default {
 .contents {
   padding: 0;
   margin: 0;
-
   .side {
     h5 {
       padding-bottom: 5px;
@@ -59,26 +58,6 @@ export default {
         color: var(--subColor);
       }
     }
-  }
-
-  .main {
-    background: #fbfbfb;
-    padding: 20px;
-    .heading {
-      margin-bottom: 55px;
-
-      h3 {
-        border-bottom: 1px solid var(--border);
-        padding: 0 0 10px 0;
-      }
-      p {
-        color: var(--text);
-      }
-      .ja {
-        font-family: 'Noto Sans JP', sans-serif;
-      }
-    }
-
   }
 }
 </style>

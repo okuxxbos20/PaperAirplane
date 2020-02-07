@@ -41,6 +41,7 @@ export default {
     height: auto;
   }
   h5 {
+    color: var(--text);
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     margin: 20px 15px;

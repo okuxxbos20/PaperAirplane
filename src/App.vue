@@ -24,11 +24,18 @@ export default {
 :root {
   --mainColor: #19b5fe;
   --subColor: #3bb4c1;
-  --backGround: #f9f9f9;
+  --backGround: #fff;
   --text: #333;
+  --footertext: #fff;
   --border: #e7e7e7;
   --black: #2e3131;
   --white: #fff;
+  --paperBackGround: #fbfbfb;
+  // dark mode
+  // --backGround: #353535;
+  // --text: #ececec;
+  // --footertext: #ececec;
+  // --paperBackGround: #404040;
 }
 // font we use in Jaoanese by default
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
@@ -38,7 +45,7 @@ export default {
 #app {
   margin: 0;
   padding: 0;
-  background: var(--white);
+  background: var(--backGround);
 }
 
 a {

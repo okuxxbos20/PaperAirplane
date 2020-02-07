@@ -5,10 +5,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import { routes } from './routes';
+import ToggleButton from 'vue-js-toggle-button'
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
+Vue.use(ToggleButton);
 
 // history mode
 const router = new VueRouter({

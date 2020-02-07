@@ -29,45 +29,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contents {
-  padding: 0;
-  margin: 0;
-
-  .side {
-    h5 {
-      padding-bottom: 5px;
+.main {
+  background: var(--paperBackGround);
+  padding: 20px;
+  .heading {
+    margin-bottom: 55px;
+    h3 {
       border-bottom: 1px solid var(--border);
+      padding: 0 0 10px 0;
       color: var(--text);
     }
-    ul {
-      padding: 0 0 15px 10px;
-      li {
-        margin: 7.5px 0;
-      }
-      a {
-        color: var(--subColor);
-      }
+    p {
+      color: var(--text);
     }
-  }
-
-  .main {
-    background: #fbfbfb;
-    padding: 20px;
-    .heading {
-      margin-bottom: 55px;
-
-      h3 {
-        border-bottom: 1px solid var(--border);
-        padding: 0 0 10px 0;
-      }
-      p {
-        color: var(--text);
-      }
-      .ja {
-        font-family: 'Noto Sans JP', sans-serif;
-      }
+    .ja {
+      font-family: 'Noto Sans JP', sans-serif;
     }
-
   }
 }
 </style>
