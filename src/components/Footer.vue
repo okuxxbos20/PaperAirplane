@@ -33,7 +33,7 @@
       :value="true"
       :labels="{ checked: '', unchecked: ''}"
       />
-    <p class="copylight">Copylight &copy;2019 PaperAirplane, All Rights Reserved.</p>
+    <p class="copylight"><small lang="en">©2020 PaperAirplane Inc.</small></p>
   </div>
 </div>
 </template>
@@ -104,7 +104,7 @@ a {
     text-align: center;
     color: var(--footertext);
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 </style>
