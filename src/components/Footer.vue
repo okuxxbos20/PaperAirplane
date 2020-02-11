@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-  <div>
+  <div :style="{color: FooterTextFunc()}">
     <ul class="nav justify-content-center mb-3">
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
@@ -42,9 +42,30 @@ export default {
   name: 'Footer',
   props: {
   },
+  data () {
+    const color = this.$store.state.color;
+    const light = color.lightMode;
+    const dark = color.darkMode;
+    const isDark = false;
+    return { color, light, dark, isDark }
+  },
   methods: {
-    DarkMode: function () {
-      alert('hey');
+    DarkMode: function() {
+      this.isDark = !this.isDark ? true : false;
+      return this.isDark;
+    },
+    FooterTextFunc: function() {
+      if (!this.isDark) {
+        var currentThemeName = 'light-mode';
+        // ここにlight-modeのときの処理を書く
+        var currentTheme = this.light.footertext;
+      } else {
+        var currentThemeName = 'dark-mode';
+        // ここにdark-modeのときの処理を書く
+        var currentTheme = this.dark.footertext;
+      }
+      console.log(currentThemeName);
+      return currentTheme;
     }
   }
 }
@@ -57,8 +78,8 @@ a {
 
 .footer {
   position: relative;
-  background-color: var(--subColor);
-  color: var(--footertext);
+  background: var(--subColor);
+  // color: var(--footertext);
   font-family: 'Open Sans', sans-serif;
   width: 100%;
   padding: 30px 0 10px;
@@ -81,7 +102,7 @@ a {
     text-align: center;
     font-size: 13px;
     transition: 0.2s;
-    color: var(--footertext);
+    // color: var(--footertext);
     &:hover {
       color: #6c7a89;
     }
@@ -92,7 +113,7 @@ a {
     .fab {
       font-size: 25px;
       transition: 0.3s;
-      color: var(--footertext);
+      // color: var(--footertext);
       margin-right: 30px;
       &:hover {
         transform: scale(1.3);
@@ -105,7 +126,7 @@ a {
   }
   .copylight {
     text-align: center;
-    color: var(--footertext);
+    // color: var(--footertext);
     margin-bottom: 5px;
     font-size: 15px;
   }
