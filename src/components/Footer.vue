@@ -31,7 +31,6 @@
       class="switch"
       :width="40"
       :value="true"
-      :labels="{ checked: '', unchecked: ''}"
       />
     <p class="copylight"><small lang="en">©2020 PaperAirplane Inc.</small></p>
   </div>
@@ -102,7 +101,7 @@ a {
   }
   .switch {
     position: absolute;
-    right: 1.5%;
+    right: 1.7%;
   }
   .copylight {
     text-align: center;

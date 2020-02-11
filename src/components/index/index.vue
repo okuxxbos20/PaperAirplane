@@ -12,14 +12,14 @@
     <div class="enterYourClass">
       <h6>Enter Your Class Code.</h6>
         <div>
-          <input type="tel" class="classCode" maxlength="1" v-model="code1">
-          <input type="tel" class="classCode" maxlength="1" v-model="code2" ref="r2">
-          <input type="tel" class="classCode" maxlength="1" v-model="code3" ref="r3">
-          <input type="tel" class="classCode" maxlength="1" v-model="code4" ref="r4">
+          <input type="tel" class="classCode" maxlength="1" v-model="code1" ref="r1">
+          <input type="tel" class="classCode" maxlength="1" v-model="code2" ref="r2" @keyup.delete="back2">
+          <input type="tel" class="classCode" maxlength="1" v-model="code3" ref="r3" @keyup.delete="back3">
+          <input type="tel" class="classCode" maxlength="1" v-model="code4" ref="r4" @keyup.delete="back4">
         </div>
       <div class="enterBtn">
         <router-link to="/class">
-          <button type="submit" ref="enter">ENTER</button>
+          <button type="submit" ref="enter" @keyup.delete="backEnter">ENTER</button>
         </router-link>
       </div>
     </div>
@@ -42,25 +42,25 @@ export default {
     }
   },
   watch: {
-    code1: function (num) {
+    code1: function(num) {
       if (num.length >= 1) {
         this.$refs.r2.focus();
         this.classcode[0] = num;
       }
     },
-    code2: function (num) {
+    code2: function(num) {
       if (num.length >= 1) {
         this.$refs.r3.focus();
         this.classcode[1] = num;
       }
     },
-    code3: function (num) {
+    code3: function(num) {
       if (num.length >= 1) {
         this.$refs.r4.focus();
         this.classcode[2] = num;
       }
     },
-    code4: function (num) {
+    code4: function(num) {
       if (num.length >= 1) {
         this.$refs.enter.focus();
         this.classcode[3] = num;
@@ -73,7 +73,17 @@ export default {
     subPhrase: function() {
       var random = Math.floor(Math.random() * this.subphrase.length);
       return random;
-    }
+    },
+    back2: function(num) {
+      if (num.target.value == "") { this.$refs.r1.focus() }
+    },
+    back3: function(num) {
+      if (num.target.value == "") { this.$refs.r2.focus() }
+    },
+    back4: function(num) {
+      if (num.target.value == "") { this.$refs.r3.focus() }
+    },
+    backEnter: function() { this.$refs.r4.focus() }
   }
 }
 </script>
