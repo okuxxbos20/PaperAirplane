@@ -12,10 +12,12 @@
     <div class="enterYourClass">
       <h6>Enter Your Class Code.</h6>
         <div>
-          <input type="tel" class="classCode" maxlength="1" v-model="code1" ref="r1">
-          <input type="tel" class="classCode" maxlength="1" v-model="code2" ref="r2" @keyup.delete="back2">
-          <input type="tel" class="classCode" maxlength="1" v-model="code3" ref="r3" @keyup.delete="back3">
-          <input type="tel" class="classCode" maxlength="1" v-model="code4" ref="r4" @keyup.delete="back4">
+          <input type="text" class="classCode" maxlength="1" v-model="code1" ref="r1">
+          <input type="text" class="classCode" maxlength="1" v-model="code2" ref="r2" @keyup.delete="back2">
+          <input type="text" class="classCode" maxlength="1" v-model="code3" ref="r3" @keyup.delete="back3">
+          <input type="text" class="classCode" maxlength="1" v-model="code4" ref="r4" @keyup.delete="back4">
+          <input type="text" class="classCode" maxlength="1" v-model="code5" ref="r5" @keyup.delete="back5">
+          <input type="text" class="classCode" maxlength="1" v-model="code6" ref="r6" @keyup.delete="back6">
         </div>
       <div class="enterBtn">
         <router-link to="/class">
@@ -38,7 +40,9 @@ export default {
       code2: "",
       code3: "",
       code4: "",
-      classcode: ['Ω', 'Ω', 'Ω', 'Ω']
+      code5: "",
+      code6: "",
+      classcode: ['Ω', 'Ω', 'Ω', 'Ω', 'Ω', 'Ω' ]
     }
   },
   watch: {
@@ -62,8 +66,20 @@ export default {
     },
     code4: function(num) {
       if (num.length >= 1) {
-        this.$refs.enter.focus();
+        this.$refs.r5.focus();
         this.classcode[3] = num;
+      }
+    },
+    code5: function(num) {
+      if (num.length >= 1) {
+        this.$refs.r6.focus();
+        this.classcode[4] = num;
+      }
+    },
+    code6: function(num) {
+      if (num.length >= 1) {
+        this.$refs.enter.focus();
+        this.classcode[5] = num;
         console.log(this.classcode);
         return this.classcode;
       }
@@ -83,7 +99,13 @@ export default {
     back4: function(num) {
       if (num.target.value == "") { this.$refs.r3.focus() }
     },
-    backEnter: function() { this.$refs.r4.focus() }
+    back5: function(num) {
+      if (num.target.value == "") { this.$refs.r4.focus() }
+    },
+    back6: function(num) {
+      if (num.target.value == "") { this.$refs.r5.focus() }
+    },
+    backEnter: function() { this.$refs.r6.focus() }
   }
 }
 </script>
