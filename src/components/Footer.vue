@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-  <div :style="{color: FooterTextFunc()}">
+  <div :class="{darka : isDark, lighta : !isDark}" :style="{color: FooterTextFunc()}">
     <ul class="nav justify-content-center mb-3">
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
@@ -55,31 +55,25 @@ export default {
       return this.isDark;
     },
     FooterTextFunc: function() {
-      if (!this.isDark) {
-        var currentThemeName = 'light-mode';
-        // ここにlight-modeのときの処理を書く
-        var currentTheme = this.light.footertext;
-      } else {
-        var currentThemeName = 'dark-mode';
-        // ここにdark-modeのときの処理を書く
-        var currentTheme = this.dark.footertext;
-      }
-      console.log(currentThemeName);
-      return currentTheme;
+      var currentTheme = !this.isDark ? this.light.footertext : this.dark.footertext;
+      return currentTheme
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-a {
+.lighta a {
   color: var(--footertext);
+}
+
+.darka a {
+  color: #353535;
 }
 
 .footer {
   position: relative;
   background: var(--subColor);
-  // color: var(--footertext);
   font-family: 'Open Sans', sans-serif;
   width: 100%;
   padding: 30px 0 10px;
@@ -102,7 +96,6 @@ a {
     text-align: center;
     font-size: 13px;
     transition: 0.2s;
-    // color: var(--footertext);
     &:hover {
       color: #6c7a89;
     }
@@ -113,7 +106,6 @@ a {
     .fab {
       font-size: 25px;
       transition: 0.3s;
-      // color: var(--footertext);
       margin-right: 30px;
       &:hover {
         transform: scale(1.3);
@@ -126,7 +118,6 @@ a {
   }
   .copylight {
     text-align: center;
-    // color: var(--footertext);
     margin-bottom: 5px;
     font-size: 15px;
   }
