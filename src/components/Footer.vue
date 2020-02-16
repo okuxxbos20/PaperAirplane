@@ -46,17 +46,19 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const isDark = false;
-    return { color, light, dark, isDark }
+    const isDark = this.$store.state.isDark;
+    return { color, light, dark, isDark };
   },
   methods: {
     DarkMode: function() {
-      this.isDark = !this.isDark ? true : false;
-      return this.isDark;
+      // this.isDark = !this.isDark ? true : false;
+      this.$store.commit('LightToDark');
+      // return this.isDark;
+      // storeのmutationにアクセスしてisDarkを変更する処理を書く
     },
     FooterTextFunc: function() {
       var currentTheme = !this.isDark ? this.light.footertext : this.dark.footertext;
-      return currentTheme
+      return currentTheme;
     }
   }
 }

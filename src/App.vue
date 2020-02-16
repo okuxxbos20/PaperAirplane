@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="{background: BgFunc()}">
     <Header/>
     <div style="height: 56px;"></div>
       <router-view></router-view>
@@ -16,6 +16,20 @@ export default {
   components: {
     Header,
     Footer
+  },
+  data() {
+    const color = this.$store.state.color;
+    const light = color.lightMode;
+    const dark = color.darkMode;
+    const isDark = this.$store.state.isDark;
+    return { color, light, dark, isDark };
+  },
+  methods: {
+    BgFunc: function () {
+      var currentTheme = !this.isDark ? this.light.backGround : this.dark.backGround;
+      console.log(this.isDark);
+      return currentTheme;
+    }
   }
 };
 </script>

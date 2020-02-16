@@ -80,7 +80,6 @@ export default {
       if (num.length >= 1) {
         this.$refs.enter.focus();
         this.classcode[5] = num;
-        console.log(this.classcode);
         return this.classcode;
       }
     },

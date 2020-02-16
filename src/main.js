@@ -33,10 +33,21 @@ const store = new Vuex.Store({
         footertext: '#353535',
         paperBackGround: '#404040',
       }
-    }
+    },
+    isDark: false
   },
   // mutaionsのみがsteteの更新を行うことができる.
-  mutations: {},
+  mutations: {
+    LightToDark (state) {
+      if (!state.isDark) {
+        state.isDark = true;
+      } else {
+        state.isDark = false;
+      }
+      console.log('yo');
+      console.log(state.isDark);
+    }
+  },
   // 非同期処理はactionsで行う.
   actions: {}
 });
@@ -46,10 +57,6 @@ const router = new VueRouter({
   routes,
   mode: 'history',
   scrollBehavior(to,from,savedPosition){
-    console.log(to);
-    console.log(from);
-    console.log(savedPosition);
-
     if (savedPosition) {
       return savedPosition;
     } else {
