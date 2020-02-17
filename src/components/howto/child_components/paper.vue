@@ -30,17 +30,14 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-  background: var(--paperBackGround);
   padding: 20px;
   .heading {
     margin-bottom: 55px;
     h3 {
       border-bottom: 1px solid var(--border);
       padding: 0 0 10px 0;
-      color: var(--text);
     }
     p {
-      color: var(--text);
     }
     .ja {
       font-family: 'Noto Sans JP', sans-serif;

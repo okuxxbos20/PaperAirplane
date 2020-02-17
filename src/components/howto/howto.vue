@@ -3,7 +3,7 @@
     <PageTitle title="HOW TO"/>
     <div class="container">
 
-      <div class="row contents">
+      <div class="row contents" :style="{color: BgFunc().text}">
         <div class="side col-md-3">
           <h5>OnThisPage</h5>
           <ul>
@@ -14,7 +14,7 @@
             <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
           </ul>
         </div>
-        <Paper :paperTitle="sidebar"/>
+        <Paper :paperTitle="sidebar" :style="{background: BgFunc().paperBackGround, color: BgFunc().text}"/>
       </div>
 
     </div>
@@ -31,12 +31,28 @@ export default {
     Paper
   },
   data () {
+    const color = this.$store.state.color;
+    const light = color.lightMode;
+    const dark = color.darkMode;
+    const isDark = this.$store.state.isDark;
     return {
       sidebar: {
         OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
         Details: ['Terms', 'Privacy', 'works']
-      }
+      },
+      color,
+      light,
+      dark,
+      isDark
     };
+  },
+  methods: {
+    BgFunc: function () {
+      var paperBackGround = !this.isDark ? this.light.paperBackGround : this.dark.paperBackGround;
+      var text = !this.isDark ? this.light.text : this.dark.text;
+      console.log(this.isDark);
+      return { paperBackGround, text };
+    }
   }
 };
 </script>
@@ -49,7 +65,6 @@ export default {
     h5 {
       padding-bottom: 5px;
       border-bottom: 1px solid var(--border);
-      color: var(--text);
     }
     ul {
       padding: 0 0 15px 10px;

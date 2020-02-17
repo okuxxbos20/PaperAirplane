@@ -158,11 +158,6 @@ export default {
       font-weight: bold;
       color: var(--text);
     }
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    }
     .classCode {
       width: 70px;
       height: 70px;
@@ -171,7 +166,7 @@ export default {
       font-weight: bold;
       color: var(--mainColor);
       border: 4px solid var(--mainColor);
-      background: var(--backGround);
+      background: transparentize(#000, 1);
       margin: 2px;
       text-align: center;
       @media screen and (max-width: 320px) {
