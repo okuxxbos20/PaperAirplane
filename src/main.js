@@ -41,15 +41,24 @@ const store = new Vuex.Store({
     LightToDark (state) {
       if (!state.isDark) {
         state.isDark = true;
+        console.log('yo');
+        console.log(state.isDark);
+        return;
       } else {
         state.isDark = false;
+        console.log('yo');
+        console.log(state.isDark);
+        return;
       }
-      console.log('yo');
-      console.log(state.isDark);
+    }
+  },
+  getters: {
+    rtnIsDark: function(state) {
+      return state.isDark;
     }
   },
   // 非同期処理はactionsで行う.
-  actions: {}
+  actions: {},
 });
 
 // history mode

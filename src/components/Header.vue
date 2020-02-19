@@ -6,7 +6,7 @@
     <label class="menu-icon" for="menu-btn">
       <span class="nav-icon"></span>
     </label>
-    <ul class="menu">
+    <ul class="menu" :style="{background: BgFunc().background}">
       <li><router-link to="/product" class="nav-link main">PRODUCT</router-link></li>
       <li><router-link to="/howto" class="nav-link main">HOW TO</router-link></li>
     </ul>
@@ -20,17 +20,16 @@ export default {
   props: {
   },
   data() {
+    var isDark = this.$store.state.isDark;
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const isDark = this.$store.state.isDark;
     return { color, light, dark, isDark };
   },
   methods: {
     BgFunc: function () {
-      var backGround = !this.isDark ? this.light.backGround : this.dark.backGround;
-      var text = !this.isDark ? this.light.text : this.dark.text;
-      console.log(this.isDark);
+      var backGround = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
+      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
       return { backGround, text };
     }
   }
@@ -39,7 +38,6 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  // border-bottom: 3px solid var(--mainColor);
   position: fixed;
   height: 67.5px;
   width: 100%;

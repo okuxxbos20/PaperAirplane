@@ -48,9 +48,8 @@ export default {
   },
   methods: {
     BgFunc: function () {
-      var paperBackGround = !this.isDark ? this.light.paperBackGround : this.dark.paperBackGround;
-      var text = !this.isDark ? this.light.text : this.dark.text;
-      console.log(this.isDark);
+      var paperBackGround = !this.$store.getters.rtnIsDark ? this.light.paperBackGround : this.dark.paperBackGround;
+      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
       return { paperBackGround, text };
     }
   }

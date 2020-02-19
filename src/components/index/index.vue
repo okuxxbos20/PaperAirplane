@@ -1,5 +1,5 @@
 <template>
-  <div class="index container">
+  <div class="index container" :style="{color: colorFunc()}">
     <div class="howtoAndInstall">
       <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
@@ -32,7 +32,11 @@
 <script>
 export default {
   data () {
+    const color = this.$store.state.color;
+    const light = color.lightMode;
+    const dark = color.darkMode;
     return {
+      color, light, dark,
       subphrase: [
         'Where We Talk.', 'For Awesome Presenters.', 'Coming soon.',
         'Do Something Fun.', 'Go Your Way.', 'No border.'],
@@ -51,6 +55,7 @@ export default {
         this.$refs.r2.focus();
         this.classcode[0] = num;
       }
+      // num.length >= 1 ? this.$refs.r2.focus(), this.classcode[0] = num;
     },
     code2: function(num) {
       if (num.length >= 1) {
@@ -104,7 +109,11 @@ export default {
     back6: function(num) {
       if (num.target.value == "") { this.$refs.r5.focus() }
     },
-    backEnter: function() { this.$refs.r6.focus() }
+    backEnter: function() { this.$refs.r6.focus() },
+    colorFunc: function() {
+      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+      return text;
+    }
   }
 }
 </script>
@@ -125,7 +134,6 @@ export default {
       font-family: 'Open Sans', sans-serif;
       font-size: 17px;
       font-weight: bold;
-      color: var(--text);
     }
     .btn {
       color: #fff;
@@ -156,7 +164,6 @@ export default {
     h6 {
       font-size: 17px;
       font-weight: bold;
-      color: var(--text);
     }
     .classCode {
       width: 70px;

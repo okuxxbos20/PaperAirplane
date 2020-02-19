@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-  <div :class="{darka : isDark, lighta : !isDark}" :style="{color: FooterTextFunc()}">
+  <div :class="{darka : this.$store.getters.rtnIsDark, lighta : !this.$store.getters.rtnIsDark}" :style="{color: FooterTextFunc()}">
     <ul class="nav justify-content-center mb-3">
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
@@ -26,7 +26,7 @@
       <a href="#"><i class="fab fa-gitlab"></i></a>
     </ul>
     <toggle-button
-      @change="DarkMode"
+      @change="DarkMode()"
       color="#373737"
       class="switch"
       :width="40"
@@ -46,18 +46,15 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const isDark = this.$store.state.isDark;
+    var isDark = this.$store.state.isDark;
     return { color, light, dark, isDark };
   },
   methods: {
     DarkMode: function() {
-      // this.isDark = !this.isDark ? true : false;
       this.$store.commit('LightToDark');
-      // return this.isDark;
-      // storeのmutationにアクセスしてisDarkを変更する処理を書く
     },
     FooterTextFunc: function() {
-      var currentTheme = !this.isDark ? this.light.footertext : this.dark.footertext;
+      var currentTheme = !this.$store.getters.rtnIsDark ? this.light.footertext : this.dark.footertext;
       return currentTheme;
     }
   }

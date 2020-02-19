@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     BgFunc: function () {
-      var currentTheme = !this.isDark ? this.light.backGround : this.dark.backGround;
+      var currentTheme = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
       console.log(this.isDark);
       return currentTheme;
     }
