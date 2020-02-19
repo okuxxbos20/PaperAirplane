@@ -20,11 +20,10 @@ export default {
   props: {
   },
   data() {
-    var isDark = this.$store.state.isDark;
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    return { color, light, dark, isDark };
+    return { color, light, dark };
   },
   methods: {
     BgFunc: function () {

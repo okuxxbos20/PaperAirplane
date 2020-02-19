@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <PageTitle title="PRODUCT"/>
-    <div class="container" :style="{color: BgFunc().text}">
+    <div class="container" :style="{color: colorFunc()}">
       <div class="product row">
         <div class="col-md-6">
           <img src="../../assets/audience.png" class="audience" alt="audience">
@@ -29,24 +29,11 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const isDark = this.$store.state.isDark;
-    return {
-      sidebar: {
-        OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
-        Details: ['Terms', 'Privacy', 'works']
-      },
-      color,
-      light,
-      dark,
-      isDark
-    };
+    return { color, light, dark };
   },
   methods: {
-    BgFunc: function () {
-      var paperBackGround = !this.isDark ? this.light.paperBackGround : this.dark.paperBackGround;
-      var text = !this.isDark ? this.light.text : this.dark.text;
-      console.log(this.isDark);
-      return { paperBackGround, text };
+    colorFunc: function () {
+       return !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
     }
   }
 };
@@ -72,8 +59,6 @@ export default {
   p {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    // text-align: justify;
-    // text-justify: inter-ideograph;
   }
 }
 </style>

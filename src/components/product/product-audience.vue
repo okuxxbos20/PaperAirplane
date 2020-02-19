@@ -26,7 +26,6 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const isDark = this.$store.state.isDark;
     return {
       sidebar: {
         OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
@@ -34,8 +33,7 @@ export default {
       },
       color,
       light,
-      dark,
-      isDark
+      dark
     };
   },
   methods: {

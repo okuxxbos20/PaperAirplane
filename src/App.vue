@@ -21,14 +21,11 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const isDark = this.$store.state.isDark;
-    return { color, light, dark, isDark };
+    return { color, light, dark };
   },
   methods: {
     BgFunc: function () {
-      var currentTheme = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
-      console.log(this.isDark);
-      return currentTheme;
+      return !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
     }
   }
 };
@@ -45,11 +42,6 @@ export default {
   --black: #2e3131;
   --white: #fff;
   --paperBackGround: #fbfbfb;
-  // dark mode
-  // --backGround: #353535;
-  // --text: #ececec;
-  // --footertext: #353535;
-  // --paperBackGround: #404040;
 }
 // font we use in Jaoanese by default
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
@@ -59,7 +51,6 @@ export default {
 #app {
   margin: 0;
   padding: 0;
-  background: var(--backGround);
 }
 
 a {

@@ -91,8 +91,7 @@ export default {
   },
   methods: {
     subPhrase: function() {
-      var random = Math.floor(Math.random() * this.subphrase.length);
-      return random;
+      return Math.floor(Math.random() * this.subphrase.length);
     },
     back2: function(num) {
       if (num.target.value == "") { this.$refs.r1.focus() }
@@ -111,8 +110,7 @@ export default {
     },
     backEnter: function() { this.$refs.r6.focus() },
     colorFunc: function() {
-      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
-      return text;
+      return !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
     }
   }
 }

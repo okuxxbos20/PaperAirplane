@@ -26,7 +26,6 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    var isDark = this.$store.state.isDark;
     return {
       sidebar: {
         OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
@@ -34,8 +33,7 @@ export default {
       },
       color,
       light,
-      dark,
-      isDark
+      dark
     };
   },
   methods: {
@@ -70,8 +68,6 @@ export default {
   p {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    // text-align: justify;
-    // text-justify: inter-ideograph;
   }
 }
 </style>

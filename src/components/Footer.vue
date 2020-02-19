@@ -46,16 +46,14 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    var isDark = this.$store.state.isDark;
-    return { color, light, dark, isDark };
+    return { color, light, dark };
   },
   methods: {
     DarkMode: function() {
       this.$store.commit('LightToDark');
     },
     FooterTextFunc: function() {
-      var currentTheme = !this.$store.getters.rtnIsDark ? this.light.footertext : this.dark.footertext;
-      return currentTheme;
+      return !this.$store.getters.rtnIsDark ? this.light.footertext : this.dark.footertext;
     }
   }
 }
