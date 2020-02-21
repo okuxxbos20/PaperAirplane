@@ -1,6 +1,9 @@
 <template>
-  <div class="component_name">
-    <p><b>{{ title }}</b></p>
+  <div class="">
+    <div class="room"></div>
+    <div class="component_name">
+      <p><b>{{ title }}</b></p>
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.room {
+  height: 65px;
+}
 .component_name {
   height: 130px;
   background: var(--subColor);

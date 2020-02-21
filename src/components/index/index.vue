@@ -4,8 +4,10 @@
       <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
       <h6 class="subtitle">{{ subphrase[subPhrase()] }}</h6>
-        <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
+      <div class="row justify-content-center mx-5">
         <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
+        <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
+      </div>
       <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
     </div>
 
@@ -25,7 +27,6 @@
         </router-link>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -119,6 +120,7 @@ export default {
 <style lang="scss" scoped>
 .index {
   text-align: center;
+  padding: 56px 0 132px;
   .howtoAndInstall {
     img {
       height: 200px;
@@ -133,15 +135,12 @@ export default {
       font-size: 17px;
       font-weight: bold;
     }
-    .btn {
-      color: #fff;
-      border-radius: 17px;
-    }
     .btn-howto {
       background: #19b5fe;
       color: var(--white);
+      border-radius: 17px;
       transition: 0.3s;
-      margin-right: 15px;
+      margin: 5px;
       &:hover{
         transform:scale(1.025);
       }
@@ -149,7 +148,9 @@ export default {
     .btn-install {
       background: #3bb4c1;
       color: var(--white);
+      border-radius: 17px;
       transition: 0.3s;
+      margin: 5px;
       &:hover{
         transform:scale(1.025);
       }
@@ -157,15 +158,15 @@ export default {
   }
 
   .enterYourClass {
-    margin: 60px 0;
+    margin: 60px 0 0;
     font-family: 'Open Sans', sans-serif;
     h6 {
       font-size: 17px;
       font-weight: bold;
     }
     .classCode {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       border-radius: 20px;
       font-size: 30px;
       font-weight: bold;
@@ -174,10 +175,11 @@ export default {
       background: transparentize(#000, 1);
       margin: 2px;
       text-align: center;
-      @media screen and (max-width: 320px) {
-        width: 60px;
-        height: 60px;
-        border-radius: 17.14px;
+      @media screen and (max-width: 375px) {
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+        font-size: 20px;
       }
     }
     .enterBtn {

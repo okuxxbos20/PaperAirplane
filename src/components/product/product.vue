@@ -1,5 +1,6 @@
 <template>
   <div class="">
+    <Header/>
     <PageTitle title="PRODUCT"/>
     <div class="container" :style="{color: colorFunc()}">
       <div class="product row">
@@ -15,15 +16,18 @@
         </div>
       </div>
     </div>
+  <Footer/>
   </div>
 </template>
 
 <script>
+import Header from '../Header.vue';
+import Footer from '../Footer.vue';
 import PageTitle from './../child_components/pagetitle.vue';
 
 export default {
   components: {
-    PageTitle
+    Header, Footer, PageTitle
   },
   data () {
     const color = this.$store.state.color;

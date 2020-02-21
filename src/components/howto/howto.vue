@@ -1,5 +1,6 @@
 <template>
   <div class="howto">
+    <Header/>
     <PageTitle title="HOW TO"/>
     <div class="container">
 
@@ -22,17 +23,19 @@
       </div>
 
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
+import Header from '../Header.vue';
+import Footer from '../Footer.vue';
 import PageTitle from './../child_components/pagetitle.vue';
 import Paper from './child_components/paper.vue';
 
 export default {
   components: {
-    PageTitle,
-    Paper
+    Header, Footer, PageTitle, Paper
   },
   data () {
     const color = this.$store.state.color;
