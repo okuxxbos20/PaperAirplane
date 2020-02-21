@@ -31,6 +31,7 @@
       class="switch"
       :width="40"
       :value="true"
+      :speed=250
       />
     <p class="copylight"><small lang="en">©2020 PaperAirplane Inc.</small></p>
   </div>

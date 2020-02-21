@@ -13,6 +13,10 @@
           <ul>
             <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
           </ul>
+          <h5>Product</h5>
+          <ul>
+            <li v-for="words in sidebar.Product" v-bind:key="words">{{ words }}</li>
+          </ul>
         </div>
         <Paper :paperTitle="sidebar" :style="{background: BgFunc().paperBackGround, color: BgFunc().text}"/>
       </div>
@@ -37,7 +41,8 @@ export default {
     return {
       sidebar: {
         OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
-        Details: ['Terms', 'Privacy', 'works']
+        Details: ['Terms', 'Privacy', 'works'],
+        Product: ['For Presenters', 'For Audience']
       },
       color,
       light,
