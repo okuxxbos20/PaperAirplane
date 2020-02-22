@@ -3,25 +3,23 @@
     <Header/>
     <PageTitle title="HOW TO"/>
     <div class="container">
-
       <div class="row contents" :style="{color: BgFunc().text}">
         <div class="side col-md-3">
           <h5>OnThisPage</h5>
           <ul>
             <li v-for="words in sidebar.OnThisPage" v-bind:key="words">{{ words }}</li>
           </ul>
-          <h5>Details</h5>
-          <ul>
-            <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
-          </ul>
           <h5>Product</h5>
           <ul>
             <li v-for="words in sidebar.Product" v-bind:key="words">{{ words }}</li>
           </ul>
+          <h5>Details</h5>
+          <ul>
+            <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
+          </ul>
         </div>
         <Paper :paperTitle="sidebar" :style="{background: BgFunc().paperBackGround, color: BgFunc().text}"/>
       </div>
-
     </div>
     <Footer/>
   </div>
@@ -34,9 +32,7 @@ import PageTitle from './../child_components/pagetitle.vue';
 import Paper from './child_components/paper.vue';
 
 export default {
-  components: {
-    Header, Footer, PageTitle, Paper
-  },
+  components: { Header, Footer, PageTitle, Paper },
   data () {
     const color = this.$store.state.color;
     const light = color.lightMode;
@@ -47,9 +43,7 @@ export default {
         Details: ['Terms', 'Privacy', 'works'],
         Product: ['For Presenters', 'For Audience']
       },
-      color,
-      light,
-      dark
+      color, light, dark
     };
   },
   methods: {

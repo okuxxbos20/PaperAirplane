@@ -120,7 +120,7 @@ export default {
 <style lang="scss" scoped>
 .index {
   text-align: center;
-  padding: 56px 0 132px;
+  padding: 56px 0 137px;
   .howtoAndInstall {
     img {
       height: 200px;
