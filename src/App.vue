@@ -1,22 +1,12 @@
 <template>
   <div id="app" :style="{background: BgFunc()}">
-    <Header/>
-    <div style="height: 56px;"></div>
-      <router-view></router-view>
-    <Footer/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-
 export default {
   name: 'app',
-  components: {
-    Header,
-    Footer
-  },
   data() {
     const color = this.$store.state.color;
     const light = color.lightMode;
@@ -49,8 +39,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 #app {
-  margin: 0;
-  padding: 0;
 }
 
 a {
