@@ -25,6 +25,7 @@ export default {
 :root {
   --mainColor: #19b5fe;
   --subColor: #3bb4c1;
+  --border: #e7e7e7;
   --white: #fff;
 }
 // font we use in Jaoanese by default

@@ -3,22 +3,30 @@
     <Header/>
     <PageTitle title="HOW TO"/>
     <div class="container">
-      <div class="row contents" :style="{color: BgFunc().text}">
+      <div class="contents row" :style="{color: BgFunc().text}">
+
         <div class="side col-md-3">
           <h5>OnThisPage</h5>
           <ul>
-            <li v-for="words in sidebar.OnThisPage" v-bind:key="words">{{ words }}</li>
+            <router-link to="/"><li v-scroll-to="'#OnThisPage_01'">What is the PaperAirplane??</li></router-link>
+            <router-link to="/"><li v-scroll-to="'#OnThisPage_02'">Install</li></router-link>
+            <router-link to="/"><li v-scroll-to="'#OnThisPage_03'">Set Up</li></router-link>
           </ul>
           <h5>Product</h5>
           <ul>
-            <li v-for="words in sidebar.Product" v-bind:key="words">{{ words }}</li>
+            <router-link to="/product-presenters"><li>For Presenters</li></router-link>
+            <router-link to="/product-audience"><li>For Audience</li></router-link>
           </ul>
           <h5>Details</h5>
           <ul>
-            <li v-for="words in sidebar.Details" v-bind:key="words">{{ words }}</li>
+            <router-link to="/Terms"><li>Terms</li></router-link>
+            <router-link to="/Privacy"><li>Privacy</li></router-link>
+            <router-link to="/"><li>works</li></router-link>
           </ul>
         </div>
+
         <Paper :paperTitle="sidebar" :style="{background: BgFunc().paperBackGround, color: BgFunc().text}"/>
+
       </div>
     </div>
     <Footer/>
@@ -40,8 +48,8 @@ export default {
     return {
       sidebar: {
         OnThisPage: ['What is the PaperAirplane??','Install','Set Up'],
-        Details: ['Terms', 'Privacy', 'works'],
-        Product: ['For Presenters', 'For Audience']
+        Product: ['For Presenters', 'For Audience'],
+        Details: ['Terms', 'Privacy', 'works']
       },
       color, light, dark
     };
@@ -60,7 +68,12 @@ export default {
 .contents {
   padding: 0;
   margin: 0;
+  display: flex;
+  display: -webkit-flex;
   .side {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
     h5 {
       padding-bottom: 5px;
       border-bottom: 1px solid var(--border);

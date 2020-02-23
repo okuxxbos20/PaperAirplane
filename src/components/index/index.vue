@@ -88,7 +88,7 @@ export default {
         this.classcode[5] = num;
         return this.classcode;
       }
-    },
+    }
   },
   methods: {
     subPhrase: function() {
@@ -115,11 +115,16 @@ export default {
     }
   }
 }
+const w = window.innerWidth;
+const h = window.innerHeight;
+console.log('width: ' + w);
+console.log('height: ' + h);
 </script>
 
 <style lang="scss" scoped>
 .index {
   text-align: center;
+  margin: 0 auto; 
   padding: 56px 0 137px;
   .howtoAndInstall {
     img {

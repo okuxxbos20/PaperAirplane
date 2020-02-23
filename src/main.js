@@ -7,12 +7,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import App from './App.vue';
 import { routes } from './routes';
 import ToggleButton from 'vue-js-toggle-button'
+import VueScrollTo from 'vue-scrollto';
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
 Vue.use(ToggleButton);
+Vue.use(VueScrollTo, {
+  duration: 300 ,
+  easing: 'ease',
+  offset: -100
+});
 
 const store = new Vuex.Store({
   state: {
