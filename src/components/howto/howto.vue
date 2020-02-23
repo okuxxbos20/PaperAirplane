@@ -8,20 +8,20 @@
         <div class="side col-md-3">
           <h5>OnThisPage</h5>
           <ul>
-            <router-link to="/"><li v-scroll-to="'#OnThisPage_01'">What is the PaperAirplane??</li></router-link>
-            <router-link to="/"><li v-scroll-to="'#OnThisPage_02'">Install</li></router-link>
-            <router-link to="/"><li v-scroll-to="'#OnThisPage_03'">Set Up</li></router-link>
+            <router-link to="/"><li class="side-list" v-scroll-to="'#OnThisPage_01'">What is the PaperAirplane??</li></router-link>
+            <router-link to="/"><li class="side-list" v-scroll-to="'#OnThisPage_02'">Install</li></router-link>
+            <router-link to="/"><li class="side-list" v-scroll-to="'#OnThisPage_03'">Set Up</li></router-link>
           </ul>
           <h5>Product</h5>
           <ul>
-            <router-link to="/product-presenters"><li>For Presenters</li></router-link>
-            <router-link to="/product-audience"><li>For Audience</li></router-link>
+            <router-link to="/product-presenters"><li class="side-list">For Presenters</li></router-link>
+            <router-link to="/product-audience"><li class="side-list">For Audience</li></router-link>
           </ul>
           <h5>Details</h5>
           <ul>
-            <router-link to="/Terms"><li>Terms</li></router-link>
-            <router-link to="/Privacy"><li>Privacy</li></router-link>
-            <router-link to="/"><li>works</li></router-link>
+            <router-link to="/Terms"><li class="side-list">Terms</li></router-link>
+            <router-link to="/Privacy"><li class="side-list">Privacy</li></router-link>
+            <router-link to="/"><li class="side-list">works</li></router-link>
           </ul>
         </div>
 
@@ -66,8 +66,6 @@ export default {
 
 <style lang="scss" scoped>
 .contents {
-  padding: 0;
-  margin: 0;
   display: flex;
   display: -webkit-flex;
   .side {
@@ -79,12 +77,22 @@ export default {
       border-bottom: 1px solid var(--border);
     }
     ul {
-      padding: 0 0 15px 10px;
+      padding: 0 0 15px 0;
       li {
         margin: 7.5px 0;
+        padding-left: 5px;
         color: var(--subColor);
       }
     }
+  }
+}
+
+.side-list {
+  transition: .15s;
+  &:hover {
+    border-left: 3px solid var(--subColor);
+    padding-left: 50px;
+    transform: scale(1.015);
   }
 }
 </style>
