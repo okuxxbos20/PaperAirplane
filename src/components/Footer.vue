@@ -73,7 +73,7 @@ export default {
   background: var(--subColor);
   font-family: 'Open Sans', sans-serif;
   width: 100%;
-  padding: 30px 0 10px;
+  padding: 20px 0 10px;
   margin-top: 30px;
   .parent {
     padding: 0;

@@ -66,8 +66,6 @@ export default {
 
 <style lang="scss" scoped>
 .contents {
-  display: flex;
-  display: -webkit-flex;
   .side {
     position: -webkit-sticky;
     position: sticky;
