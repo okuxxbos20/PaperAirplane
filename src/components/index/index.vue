@@ -47,10 +47,17 @@ console.log('height: ' + h);
 </script>
 
 <style lang="scss" scoped>
+html {
+  height: 100%;
+}
+
 .index {
   text-align: center;
-  margin: 0 auto;
-  padding: 56px 0 137px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
   .howtoAndInstall {
     img {
       height: 200px;
