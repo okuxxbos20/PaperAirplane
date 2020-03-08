@@ -13,6 +13,7 @@ import TermsComp from './components/howto/terms';
 import PrivacyComp from './components/howto/privacy';
 //class
 import ClassComp from './components/class';
+import ClassDemoComp from './components/class-demo';
 
 export const routes = [{
     path: '/',
@@ -58,5 +59,9 @@ export const routes = [{
     path: '/class',
     component: ClassComp,
     name:'class'
+  },{
+    path: '/class-demo',
+    component: ClassDemoComp,
+    name:'class-demo'
   }
 ];
