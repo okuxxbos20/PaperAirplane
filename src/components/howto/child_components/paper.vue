@@ -53,11 +53,14 @@ export default {
       border-bottom: 1px solid var(--border);
       padding: 0 0 10px 0;
     }
-    p {
-    }
     .ja {
       font-family: 'Noto Sans JP', sans-serif;
     }
+  }
+}
+@media screen and (max-width: 580px) {
+  .main {
+    margin: 0 15px;
   }
 }
 </style>

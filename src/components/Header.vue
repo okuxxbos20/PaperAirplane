@@ -41,7 +41,7 @@ header {
   height: 67.5px;
   width: 100%;
   z-index: 3;
-  ul{
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
