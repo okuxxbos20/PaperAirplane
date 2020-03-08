@@ -1,5 +1,12 @@
-<template>
-  <div class="index container" :style="{color: colorFunc()}">
+<template :style="{background: colorFunc().BackGround}">
+  <div
+  class="index container"
+  :style="{
+    color: colorFunc().text,
+    height: forIndexHeight()
+    }"
+  >
+  <div class="main">
     <div class="howtoAndInstall">
       <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
@@ -10,8 +17,8 @@
       </div>
       <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
     </div>
-
     <ClassCode/>
+  </div>
   </div>
 </template>
 
@@ -36,28 +43,29 @@ export default {
       return Math.floor(Math.random() * this.subphrase.length);
     },
     colorFunc: function() {
-      return !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+      var BackGround = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
+      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+      return { BackGround, text };
+    },
+    forIndexHeight: function() {
+      return window.innerHeight.toString() + 'px';
     }
   }
 }
-const w = window.innerWidth;
-const h = window.innerHeight;
-console.log('width: ' + w);
-console.log('height: ' + h);
 </script>
 
 <style lang="scss" scoped>
-html {
-  height: 100%;
-}
-
 .index {
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
+  position: relative;
+  .main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    width: 100%;
+  }
   .howtoAndInstall {
     img {
       height: 200px;
