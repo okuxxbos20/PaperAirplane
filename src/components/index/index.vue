@@ -11,7 +11,7 @@
       <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
       <h1 class="title"><b>PaperAirplane</b></h1>
       <h6 class="subtitle">{{ subphrase[subPhrase()] }}</h6>
-      <div class="row justify-content-center mx-5">
+      <div class="row justify-content-center btn-parent">
         <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
         <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
       </div>
@@ -57,13 +57,19 @@ export default {
 <style lang="scss" scoped>
 .index {
   text-align: center;
-  position: relative;
+  // position: relative;
   .main {
+    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform : translate(-50%,-50%);
     transform : translate(-50%,-50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // -webkit-transform : translate(-50%,-50%);
+    // transform : translate(-50%,-50%);
     width: 100%;
   }
   .howtoAndInstall {
@@ -79,6 +85,10 @@ export default {
       font-family: 'Open Sans', sans-serif;
       font-size: 17px;
       font-weight: bold;
+    }
+    .btn-parent {
+      width: 70%;
+      margin: 0 auto;
     }
     .btn-howto {
       background: #19b5fe;
