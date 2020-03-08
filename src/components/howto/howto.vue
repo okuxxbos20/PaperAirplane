@@ -25,7 +25,10 @@
           </ul>
         </div>
 
-        <Paper :paperTitle="sidebar" :style="{background: BgFunc().paperBackGround, color: BgFunc().text}"/>
+        <Paper
+        :paperTitle="sidebar"
+        :style="{background: BgFunc().paperBackGround, color: BgFunc().text}"
+        />
 
       </div>
     </div>
