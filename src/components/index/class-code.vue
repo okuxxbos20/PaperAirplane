@@ -104,18 +104,20 @@ export default {
   .classCode {
     width: 60px;
     height: 60px;
-    border-radius: 20px;
     font-size: 30px;
     font-weight: bold;
     color: var(--mainColor);
-    border: 4px solid var(--mainColor);
+    border: none;
+    border-bottom: 4px solid var(--mainColor);
     background: transparentize(#000, 1);
     margin: 2px;
     text-align: center;
+    &:focus {
+    outline: none;
+    }
     @media screen and (max-width: 375px) {
       width: 45px;
       height: 45px;
-      border-radius: 15px;
       font-size: 20px;
     }
   }
@@ -135,7 +137,18 @@ export default {
         background: var(--backGround);
         border: 4px solid var(--mainColor);
       }
+      &:focus {
+        outline: none;
+        color: var(--mainColor);
+        background: var(--backGround);
+        border: 4px solid var(--mainColor);
+      }
     }
+  }
+  .enterFocus {
+    color: var(--mainColor);
+    background: var(--backGround);
+    border: 4px solid var(--mainColor);
   }
 }
 </style>

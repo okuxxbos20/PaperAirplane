@@ -57,7 +57,6 @@ export default {
 <style lang="scss" scoped>
 .index {
   text-align: center;
-  // position: relative;
   .main {
     margin: 0 auto;
     position: absolute;
@@ -65,11 +64,6 @@ export default {
     left: 50%;
     -webkit-transform : translate(-50%,-50%);
     transform : translate(-50%,-50%);
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // -webkit-transform : translate(-50%,-50%);
-    // transform : translate(-50%,-50%);
     width: 100%;
   }
   .howtoAndInstall {
