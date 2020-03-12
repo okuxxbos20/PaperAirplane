@@ -22,7 +22,7 @@
     <ul class="footer-sns">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/air_plane.jp/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/paperairplane.jp/"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-gitlab"></i></a>
     </ul>
     <toggle-button
