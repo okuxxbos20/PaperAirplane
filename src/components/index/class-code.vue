@@ -1,14 +1,14 @@
 <template>
   <div class="enterYourClass">
     <h6>Enter Your Class Code.</h6>
-      <div>
-        <input type="text" class="classCode" maxlength="1" v-model="code1" ref="r1">
-        <input type="text" class="classCode" maxlength="1" v-model="code2" ref="r2" @keyup.delete="back2">
-        <input type="text" class="classCode" maxlength="1" v-model="code3" ref="r3" @keyup.delete="back3">
-        <input type="text" class="classCode" maxlength="1" v-model="code4" ref="r4" @keyup.delete="back4">
-        <input type="text" class="classCode" maxlength="1" v-model="code5" ref="r5" @keyup.delete="back5">
-        <input type="text" class="classCode" maxlength="1" v-model="code6" ref="r6" @keyup.delete="back6">
-      </div>
+    <div>
+      <input type="text" class="classCode" maxlength="1" v-model="code1" ref="r1">
+      <input type="text" class="classCode" maxlength="1" v-model="code2" ref="r2" @keyup.delete="back2">
+      <input type="text" class="classCode" maxlength="1" v-model="code3" ref="r3" @keyup.delete="back3">
+      <input type="text" class="classCode" maxlength="1" v-model="code4" ref="r4" @keyup.delete="back4">
+      <input type="text" class="classCode" maxlength="1" v-model="code5" ref="r5" @keyup.delete="back5">
+      <input type="text" class="classCode" maxlength="1" v-model="code6" ref="r6" @keyup.delete="back6">
+    </div>
     <div class="enterBtn">
       <router-link to="/class">
         <button type="submit" ref="enter" @keyup.delete="backEnter">ENTER</button>

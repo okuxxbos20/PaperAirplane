@@ -13,8 +13,8 @@
       :showEmoji="true"
       :showFile="true"
       :showTypingIndicator="showTypingIndicator"
-  	  :showLauncher="true"
-  	  :showCloseButton="true"
+      :showLauncher="true"
+      :showCloseButton="true"
       :colors="colors"
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :messageStyling="messageStyling"
@@ -125,7 +125,7 @@ export default {
     handleScrollToTop () {
       // called when the user scrolls message list to top
       // leverage pagination for loading another page of messages
-  	},
+    },
     handleOnType () {
       console.log('Emit typing event')
     },

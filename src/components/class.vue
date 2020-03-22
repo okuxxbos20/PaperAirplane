@@ -31,8 +31,8 @@
     }
     .chat-thumbnail {
       width: 40px;
-    	height: 40px;
-    	border-radius: 50%;
+      height: 40px;
+      border-radius: 50%;
       border: 1px solid #eee;
       margin: 20px;
     }
