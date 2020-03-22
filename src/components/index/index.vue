@@ -1,24 +1,21 @@
 <template :style="{background: colorFunc().BackGround}">
   <div
-  class="index container"
-  :style="{
-    color: colorFunc().text,
-    height: forIndexHeight()
-    }"
+    class="index container"
+    :style="{color: colorFunc().text, height: forIndexHeight()}"
   >
-  <div class="main">
-    <div class="howtoAndInstall">
-      <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
-      <h1 class="title"><b>PaperAirplane</b></h1>
-      <h6 class="subtitle">{{ subphrase[subPhrase()] }}</h6>
-      <div class="row justify-content-center btn-parent">
-        <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
-        <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
+    <div class="main">
+      <div class="howtoAndInstall">
+        <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
+        <h1 class="title"><b>PaperAirplane</b></h1>
+        <h6 class="subtitle">{{ subphrase[subPhrase()] }}</h6>
+        <div class="row justify-content-center btn-parent">
+          <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
+          <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
+        </div>
+        <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
       </div>
-      <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
+      <ClassCode/>
     </div>
-    <ClassCode/>
-  </div>
   </div>
 </template>
 
