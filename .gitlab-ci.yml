@@ -1,15 +1,21 @@
-# Reference: https://cli.vuejs.org/guide/deployment.html#gitlab-pages
+# Reference: https://qiita.com/reon777/items/54f251ec9b23ca67e05c
 
-pages: # the job must be named pages
-  image: node:latest
+image: andreysenov/firebase-tools
+
+stages:
+  - deploy
+
+cache:                  
+  paths:                
+    - node_modules/     
+  key: "$CI_BUILD_REPO" 
+
+deploy-prod:
   stage: deploy
-  script:
-    - npm ci
-    - npm run build
-    - mv public public-vue # GitLab Pages hooks on the public folder
-    - mv dist public # rename the dist folder (result of npm run build)
-  artifacts:
-    paths:
-      - public # artifact path must be /public for GitLab Pages to pick it up
   only:
     - master
+  script:
+    - npm install
+    - npm run build
+    - firebase use $FIREBASE_PROJECT_ID --token $FIREBASE_TOKEN
+    - firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN
