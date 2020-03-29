@@ -1,6 +1,6 @@
 # Reference: https://qiita.com/reon777/items/54f251ec9b23ca67e05c
 
-image: rambabusaravanan/firebase
+image: andreysenov/firebase-tools
 
 stages:
   - deploy
