@@ -14,7 +14,7 @@
         </div>
         <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
       </div>
-      <ClassCode/>
+      <ClassCode @enterButtonClicked="enterButtonClicked" />
     </div>
   </div>
 </template>
@@ -46,6 +46,10 @@ export default {
     },
     forIndexHeight: function() {
       return window.innerHeight.toString() + 'px';
+    },
+    enterButtonClicked: function(classcode) {
+      console.log('ENTER BUTTON CLICKED:', classcode);
+      this.$router.push('class');
     }
   }
 }

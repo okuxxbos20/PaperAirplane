@@ -10,9 +10,7 @@
       <input type="text" class="classCode" maxlength="1" v-model="code6" ref="r6" @keyup.delete="back6">
     </div>
     <div class="enterBtn">
-      <router-link to="/class">
-        <button type="submit" ref="enter" @keyup.delete="backEnter">ENTER</button>
-      </router-link>
+      <button type="submit" ref="enter" @keyup.delete="backEnter" @click="$emit('enterButtonClicked', classcode)">ENTER</button>
     </div>
   </div>
 </template>
@@ -29,46 +27,37 @@ export default {
       code4: "",
       code5: "",
       code6: "",
-      classcode: ['Ω', 'Ω', 'Ω', 'Ω', 'Ω', 'Ω' ]
     }
   },
   watch: {
     code1: function(num) {
       if (num.length >= 1) {
         this.$refs.r2.focus();
-        this.classcode[0] = num;
       }
-      // num.length >= 1 ? this.$refs.r2.focus(), this.classcode[0] = num;
     },
     code2: function(num) {
       if (num.length >= 1) {
         this.$refs.r3.focus();
-        this.classcode[1] = num;
       }
     },
     code3: function(num) {
       if (num.length >= 1) {
         this.$refs.r4.focus();
-        this.classcode[2] = num;
       }
     },
     code4: function(num) {
       if (num.length >= 1) {
         this.$refs.r5.focus();
-        this.classcode[3] = num;
       }
     },
     code5: function(num) {
       if (num.length >= 1) {
         this.$refs.r6.focus();
-        this.classcode[4] = num;
       }
     },
     code6: function(num) {
       if (num.length >= 1) {
         this.$refs.enter.focus();
-        this.classcode[5] = num;
-        return this.classcode;
       }
     }
   },
@@ -88,7 +77,12 @@ export default {
     back6: function(num) {
       if (num.target.value == "") { this.$refs.r5.focus() }
     },
-    backEnter: function() { this.$refs.r6.focus() }
+    backEnter: function() { this.$refs.r6.focus() },
+  },
+  computed: {
+    classcode: function() {
+      return this.code1 + this.code2 + this.code3 + this.code4 + this.code5 + this.code6;
+    }
   }
 };
 </script>
