@@ -10,9 +10,7 @@
       <input type="text" class="classCode" maxlength="1" v-model="code6" ref="r6" @keyup.delete="back6">
     </div>
     <div class="enterBtn">
-      <router-link to="/class">
-        <button type="submit" ref="enter" @keyup.delete="backEnter">ENTER</button>
-      </router-link>
+      <button type="submit" ref="enter" @keyup.delete="backEnter" @click="$emit('enterButtonClicked', classcode)">ENTER</button>
     </div>
   </div>
 </template>
