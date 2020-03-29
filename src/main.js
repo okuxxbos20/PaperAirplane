@@ -8,7 +8,7 @@ import App from './App.vue';
 import { routes } from './routes';
 import ToggleButton from 'vue-js-toggle-button'
 import VueScrollTo from 'vue-scrollto';
-import Chat from 'vue-beautiful-chat'
+import Chat from 'vue-beautiful-chat';
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);
@@ -21,7 +21,6 @@ Vue.use(VueScrollTo, {
   offset: -100
 });
 Vue.use(Chat);
-
 
 const store = new Vuex.Store({
   state: {
