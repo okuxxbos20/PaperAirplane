@@ -6,9 +6,8 @@
         <i class="fas fa-chevron-left"></i>
       </router-link>
       <ul class="h-info">
-        <li><img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail"></li>
-        <li><p class="class-code"><code>@wu80p1</code></p></li>
-        <li><i class="fas fa-info-circle information"></i></li>
+        <li><img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail" @click="chatHeaderInfo()"></li>
+        <li><p class="class-code"><code>@cal01234</code></p></li>
       </ul>
     </div>
 
@@ -21,8 +20,12 @@
           <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]">
             <p class="msg" @click="showTime(idx)">{{ item.msg }}</p>
             <p class="sent_time" v-show="item.status">{{ item.time }}
-              <i class="far fa-heart not_like" v-show="!item.liked" @click="msgLike(idx)"></i>
-              <i class="fas fa-heart liked" v-show="item.liked" @click="msgLike(idx)"></i>
+              <i class="far fa-heart not_like" v-show="!item.liked" @click="msgLike(idx)">
+                <code class="likeCnt">{{ item.likeCnt }}</code>
+              </i>
+              <i class="fas fa-heart liked" v-show="item.liked" @click="msgLike(idx)">
+                <code class="likeCnt">{{ item.likeCnt }}</code>
+              </i>
             </p>
           </div>
         </div>
@@ -53,33 +56,41 @@ export default {
         msg: 'Welcome to the PaperAirplane!',
         time: currentTime,
         status: false,
-        liked: false
+        liked: true,
+        likeCnt: 21
       },{
         msg: 'This is chat window. And as you know, it is prototype yet. Coming soon.',
         time: currentTime,
         status: false,
-        liked: false
+        liked: false,
+        likeCnt: 0
       },{
         msg: 'And if you wanna get-in-touch with us, plz send DM!',
         time: currentTime,
         status: false,
-        liked: false
+        liked: false,
+        likeCnt: 0
       },{
         msg: 'Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.',
         time: currentTime,
         status: true,
-        liked: false
+        liked: false,
+        likeCnt: 0
       }];
     return { msgArray, currentTime };
   },
   methods: {
+    chatHeaderInfo () {
+      alert('yo');
+    },
     sendText (text) {
       var len = this.msgArray.length;
       var item = {
         msg: text,
         time: this.currentTime,
         status: true,
-        liked: false
+        liked: false,
+        likeCnt: 0
       };
       this.msgArray[len-1].status = false;
       this.msgArray.push(item);
@@ -88,7 +99,16 @@ export default {
       this.msgArray[idx].status = !this.msgArray[idx].status ? true : false;
     },
     msgLike (idx) {
-      this.msgArray[idx].liked = !this.msgArray[idx].liked ? true : false;
+      if (!this.msgArray[idx].liked) {
+        this.msgArray[idx].likeCnt ++;
+        this.msgArray[idx].liked = true;
+        return;
+      }
+      if (this.msgArray[idx].liked) {
+        this.msgArray[idx].likeCnt --;
+        this.msgArray[idx].liked = false;
+        return;
+      }
     }
   }
 }
@@ -121,6 +141,11 @@ template {
       border-radius: 50%;
       border: none;
       margin: 12.5px;
+      transition: 0.2s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.15);
+      }
     }
     .class-code {
       code { color: var(--mainColor); }
@@ -128,17 +153,6 @@ template {
       font-size: 20px;
       padding: 4px 0;
       margin: 12.5px 0;
-    }
-    .information {
-      color: var(--mainColor);
-      font-size: 24px;
-      height: 24px;
-      margin: 20.5px 10px;
-      transition: 0.2s;
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.2);
-      }
     }
   }
   // chat-header
@@ -171,9 +185,9 @@ template {
           }
         }
         .sent_time {
-          margin: 2px 0 0 10px;
+          margin: 2px 0 0 20px;
           .not_like {
-            margin-left: 20px;
+            margin-left: 10px;
             padding: 8px;
             border-radius: 100px;
             transition: 0.2s;
@@ -181,9 +195,13 @@ template {
               cursor: pointer;
               background: #eee;
             }
+            .likeCnt {
+              padding-left: 6px;
+              color: #222;
+            }
           }
           .liked {
-            margin-left: 20px;
+            margin-left: 10px;
             color: #f64747;
             padding: 8px;
             border-radius: 100px;
@@ -191,6 +209,9 @@ template {
             &:hover {
               cursor: pointer;
               background: #f1a9a0;
+            }
+            .likeCnt {
+              padding-left: 6px;
             }
           }
         }
