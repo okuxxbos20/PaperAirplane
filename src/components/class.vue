@@ -6,12 +6,28 @@
         <i class="fas fa-chevron-left"></i>
       </router-link>
       <ul class="h-info">
-        <li><img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail" @click="chatHeaderInfo()"></li>
+        <li>
+          <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail" @click="chatHeaderInfo()">
+        </li>
         <li><p class="class-code"><code>@cal01234</code></p></li>
       </ul>
+
+      <div class="overlay" v-show="this.showInfo">
+        <div class="overlay_content">
+          <ul class="options">
+            <li><i class="fas fa-times close-icon" @click="chatHeaderInfo()"></i></li>
+          </ul>
+          <div class="class-info row">
+            <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail col-2">
+            <p class="ppl-num col-9"><code>50</code>Audiencies</p>
+          </div>
+          <div class="bio">this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="window container">
+    <div class="window container" :class="{ blur_place: this.showInfo }">
       <div class="person row">
         <div class="profile col-xs-1">
           <img src="../assets/okuicon.jpg" alt="logo" class="profile-thumbnail">
@@ -77,11 +93,15 @@ export default {
         liked: false,
         likeCnt: 0
       }];
-    return { msgArray, currentTime };
+    return {
+      msgArray,
+      currentTime,
+      showInfo: false
+   };
   },
   methods: {
     chatHeaderInfo () {
-      alert('yo');
+      this.showInfo = !this.showInfo ? true : false;
     },
     sendText (text) {
       var len = this.msgArray.length;
@@ -121,6 +141,9 @@ template {
 
 .chat {
   // chat-header
+  .blur_place {
+    filter: blur(1.5px);
+  }
   .chat-header {
     height: 65px;
     border-bottom: 2px solid #eee;
@@ -153,6 +176,72 @@ template {
       font-size: 20px;
       padding: 4px 0;
       margin: 12.5px 0;
+    }
+    .overlay {
+      .options {
+        padding: 0;
+        li {
+          float: right;
+          padding: 0 10px;
+        }
+        .close-icon {
+          font-size: 20px;
+          color: var(--mainColor);
+          border: none;
+          border-radius: 100px;
+          transition: 0.2s;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.15);
+          }
+        }
+      }
+      .class-info {
+        padding: 0;
+        margin: 0;
+        li {
+          float: left;
+          padding: 0 10px;
+          height: 55px;
+        }
+        .ppl-num {
+          color: #777;
+          font-weight: 600;
+          padding: 10px 0;
+          margin: 0;
+          code {
+            color: var(--mainColor);
+            font-style: italic;
+            padding-right: 5px;
+            font-size: 20px;
+          }
+        }
+      }
+      .chat-thumbnail {
+        margin: 5px 12.5px 10px;
+      }
+      z-index: 99;
+      position: fixed;
+      top: 0%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .overlay_content {
+        position: absolute;
+        top: 10%;
+        z-index: 100;
+        padding: 12px;
+        border-radius: 8px;
+        width: 480px;
+        background: #fff;
+        box-shadow: 2px 2px 25px #ccc;
+        .bio {
+          padding: 0 15px;
+        }
+      }
     }
   }
   // chat-header
