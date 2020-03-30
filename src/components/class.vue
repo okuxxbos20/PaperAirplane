@@ -20,9 +20,9 @@
         <div class="zone col-xs-8">
           <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]">
             <p class="msg" @click="showTime(idx)">{{ item.msg }}</p>
-            <p class="sent_time" v-if="item.status">{{ item.time }}
-              <i class="far fa-heart not_like" v-if="!item.liked" @click="msgLike(idx)"></i>
-              <i class="fas fa-heart liked" v-if="item.liked" @click="msgLike(idx)"></i>
+            <p class="sent_time" v-show="item.status">{{ item.time }}
+              <i class="far fa-heart not_like" v-show="!item.liked" @click="msgLike(idx)"></i>
+              <i class="fas fa-heart liked" v-show="item.liked" @click="msgLike(idx)"></i>
             </p>
           </div>
         </div>
