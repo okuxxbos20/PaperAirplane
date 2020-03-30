@@ -18,8 +18,8 @@
             <li><i class="fas fa-times close-icon" @click="chatHeaderInfo()"></i></li>
           </ul>
           <div class="class-info row">
-            <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail col-2">
-            <p class="ppl-num col-9"><code>50</code>Audiencies</p>
+            <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail col-xs-2">
+            <p class="ppl-num col-xs-9"><code>50</code>Audiencies</p>
           </div>
           <div class="bio">this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</div>
         </div>
@@ -236,6 +236,9 @@ template {
         padding: 12px;
         border-radius: 8px;
         width: 480px;
+        @media only screen and (max-width: 500px) {
+          width: 90%;
+        }
         background: #fff;
         box-shadow: 2px 2px 25px #ccc;
         .bio {
