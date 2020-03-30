@@ -2,21 +2,28 @@
   <div class="chat">
 
     <div class="chat-header row">
-      <router-link to="/" class="previous"><i class="fas fa-chevron-left"></i></router-link>
-      <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail">
-      <p class="class-code">// wu80p1</p>
-      <!-- <p class="n-of-member">5 people in chat</p> -->
+      <router-link to="/" class="go-back">
+        <i class="fas fa-chevron-left"></i>
+      </router-link>
+      <ul class="h-info">
+        <li><img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail"></li>
+        <li><p class="class-code"><code>@wu80p1</code></p></li>
+        <li><i class="fas fa-info-circle information"></i></li>
+      </ul>
     </div>
 
     <div class="window container">
       <div class="person row">
         <div class="profile col-xs-1">
-          <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail">
+          <img src="../assets/okuicon.jpg" alt="logo" class="profile-thumbnail">
         </div>
         <div class="zone col-xs-8">
           <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]">
-            <p class="msg">{{ item.msg }}</p>
-            <p class="sent_time" v-if="item.status">{{ item.time }}</p>
+            <p class="msg" @click="showTime(idx)">{{ item.msg }}</p>
+            <p class="sent_time" v-if="item.status">{{ item.time }}
+              <i class="far fa-heart not_like" v-if="!item.liked" @click="msgLike(idx)"></i>
+              <i class="fas fa-heart liked" v-if="item.liked" @click="msgLike(idx)"></i>
+            </p>
           </div>
         </div>
       </div>
@@ -43,32 +50,45 @@ export default {
     var m = moment();
     var currentTime = m.format('H:mm');
     var msgArray = [{
-        msg: 'hello world!',
+        msg: 'Welcome to the PaperAirplane!',
         time: currentTime,
-        status: false
+        status: false,
+        liked: false
       },{
         msg: 'This is chat window. And as you know, it is prototype yet. Coming soon.',
         time: currentTime,
-        status: true
+        status: false,
+        liked: false
       },{
         msg: 'And if you wanna get-in-touch with us, plz send DM!',
         time: currentTime,
-        status: false
+        status: false,
+        liked: false
       },{
-        msg: 'what a hell 🤮',
+        msg: 'Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.',
         time: currentTime,
-        status: true
+        status: true,
+        liked: false
       }];
     return { msgArray, currentTime };
   },
   methods: {
-    sendText: function (text) {
+    sendText (text) {
+      var len = this.msgArray.length;
       var item = {
         msg: text,
         time: this.currentTime,
-        status: true
+        status: true,
+        liked: false
       };
+      this.msgArray[len-1].status = false;
       this.msgArray.push(item);
+    },
+    showTime (idx) {
+      this.msgArray[idx].status = !this.msgArray[idx].status ? true : false;
+    },
+    msgLike (idx) {
+      this.msgArray[idx].liked = !this.msgArray[idx].liked ? true : false;
     }
   }
 }
@@ -82,36 +102,43 @@ template {
 .chat {
   // chat-header
   .chat-header {
-    height: 80%;
-    position: relative;
-    border-bottom: 2px solid var(--mainColor);
+    height: 65px;
+    border-bottom: 2px solid #eee;
     margin: 0 20px;
-    .previous {
+    .go-back {
       color: var(--mainColor);
       font-size: 20px;
-      padding: 26px 0 38px;
+      margin: 17.5px 0;
+    }
+    .h-info {
+      li { float:left; }
+      padding: 0;
+      margin: auto;
     }
     .chat-thumbnail {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       border: none;
-      margin: 20px;
+      margin: 12.5px;
     }
     .class-code {
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
-      color: var(--mainColor);
+      code { color: var(--mainColor); }
+      height: 40px;
       font-size: 20px;
-      padding: 24px 10px;
-      margin: 0;
+      padding: 4px 0;
+      margin: 12.5px 0;
     }
-    .n-of-member {
-      padding: 4px 10px;
-      position: absolute;
-      top: 78%;
-      -webkit-transform : translate(0%,-50%);
-      transform : translate(0%,-50%);
+    .information {
+      color: var(--mainColor);
+      font-size: 24px;
+      height: 24px;
+      margin: 20.5px 10px;
+      transition: 0.2s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
     }
   }
   // chat-header
@@ -120,7 +147,7 @@ template {
     padding: 20px 0 0 0;
     .profile {
       margin-left: 10px;
-      .chat-thumbnail {
+      .profile-thumbnail {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -136,10 +163,36 @@ template {
           font-size: 18px;
           background: #eee;
           padding: 8px 15px;
+          margin: 15px 0 0 0;
           border-radius: 0 20px 20px 20px;
+          &:hover {
+            cursor: pointer;
+            background: #ddd;
+          }
         }
         .sent_time {
-          text-align: center;
+          margin: 2px 0 0 10px;
+          .not_like {
+            margin-left: 20px;
+            padding: 8px;
+            border-radius: 100px;
+            transition: 0.2s;
+            &:hover {
+              cursor: pointer;
+              background: #eee;
+            }
+          }
+          .liked {
+            margin-left: 20px;
+            color: #f64747;
+            padding: 8px;
+            border-radius: 100px;
+            transition: 0.2s;
+            &:hover {
+              cursor: pointer;
+              background: #f1a9a0;
+            }
+          }
         }
       }
     }
