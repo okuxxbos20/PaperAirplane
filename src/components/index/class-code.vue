@@ -1,6 +1,7 @@
 <template>
   <div class="enterYourClass">
-    <h6>Enter Your Class Code.</h6>
+    <h6 v-show="!this.isError">Enter Your Class Code.</h6>
+    <h6 v-show="this.isError">Code must be 6 characters.</h6>
     <div>
       <input type="text" class="classCode" maxlength="1" v-model="code1" ref="r1">
       <input type="text" class="classCode" maxlength="1" v-model="code2" ref="r2" @keyup.delete="back2">
@@ -21,43 +22,53 @@ export default {
   props: {},
   data() {
     return {
+      // classcodeは常に監視されなければならない
+      classcode: ['ç', 'ç', 'ç', 'ç', 'ç', 'ç'],
       code1: "",
       code2: "",
       code3: "",
       code4: "",
       code5: "",
       code6: "",
+      isError: false
     }
   },
   watch: {
     code1: function(num) {
       if (num.length >= 1) {
         this.$refs.r2.focus();
+        this.classcode[0] = num;
       }
     },
     code2: function(num) {
       if (num.length >= 1) {
         this.$refs.r3.focus();
+        this.classcode[1] = num;
       }
     },
     code3: function(num) {
       if (num.length >= 1) {
         this.$refs.r4.focus();
+        this.classcode[2] = num;
       }
     },
     code4: function(num) {
       if (num.length >= 1) {
         this.$refs.r5.focus();
+        this.classcode[3] = num;
       }
     },
     code5: function(num) {
       if (num.length >= 1) {
         this.$refs.r6.focus();
+        this.classcode[4] = num;
       }
     },
     code6: function(num) {
       if (num.length >= 1) {
         this.$refs.enter.focus();
+        this.classcode[5] = num;
+        console.log(this.classcode);
       }
     }
   },
@@ -78,12 +89,15 @@ export default {
       if (num.target.value == "") { this.$refs.r5.focus() }
     },
     backEnter: function() { this.$refs.r6.focus() },
-  },
-  computed: {
-    classcode: function() {
-      return this.code1 + this.code2 + this.code3 + this.code4 + this.code5 + this.code6;
+    checkError: function () {
+      return this.isError;
     }
-  }
+  },
+  // computed: {
+  //   classcode: function() {
+  //     return this.code1 + this.code2 + this.code3 + this.code4 + this.code5 + this.code6;
+  //   }
+  // }
 };
 </script>
 
