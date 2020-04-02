@@ -7,9 +7,9 @@
       </router-link>
       <ul class="h-info">
         <li>
-          <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail" @click="chatHeaderInfo()">
+          <img src="../../assets/okuicon.jpg" alt="logo" class="chat-thumbnail" @click="chatHeaderInfo()">
         </li>
-        <li><p class="class-code"><code>@cal01234</code></p></li>
+        <li><p class="class-code"><code>@test01234</code></p></li>
       </ul>
 
       <div class="overlay" v-show="this.showInfo">
@@ -18,7 +18,7 @@
             <li><i class="fas fa-times close-icon" @click="chatHeaderInfo()"></i></li>
           </ul>
           <div class="class-info row">
-            <img src="../assets/okuicon.jpg" alt="logo" class="chat-thumbnail col-xs-2">
+            <img src="../../assets/okuicon.jpg" alt="logo" class="chat-thumbnail col-xs-2">
             <p class="ppl-num col-xs-9"><code>50</code>Audiencies</p>
           </div>
           <div class="bio">this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).this is infomation.Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</div>
@@ -30,7 +30,7 @@
     <div class="window container" :class="{ blur_place: this.showInfo }">
       <div class="person row">
         <div class="profile col-xs-1">
-          <img src="../assets/okuicon.jpg" alt="logo" class="profile-thumbnail">
+          <img src="../../assets/okuicon.jpg" alt="logo" class="profile-thumbnail">
         </div>
         <div class="zone col-xs-8">
           <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]">

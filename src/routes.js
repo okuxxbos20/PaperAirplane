@@ -12,7 +12,7 @@ import HowtoComp from './components/howto/howto';
 import TermsComp from './components/howto/terms';
 import PrivacyComp from './components/howto/privacy';
 //class
-import ClassComp from './components/class';
+import ClassComp from './components/class/';
 import ClassDemoComp from './components/class-demo';
 
 export const routes = [{
