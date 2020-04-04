@@ -1,17 +1,17 @@
 <template>
-<div>
-  <header :style="{background: BgFunc().backGround, color: BgFunc().text}">
-    <router-link to="/" class="logo">PaperAirplane</router-link>
-    <input class="menu-btn" type="checkbox" id="menu-btn"/>
-    <label class="menu-icon" for="menu-btn">
-      <span class="nav-icon"></span>
-    </label>
-    <ul class="menu" :style="{background: BgFunc().background}">
-      <li><router-link to="/product" class="nav-link main">PRODUCT</router-link></li>
-      <li><router-link to="/howto" class="nav-link main">HOW TO</router-link></li>
-    </ul>
-  </header>
-</div>
+  <div>
+    <header :style="{background: BgFunc().backGround, color: BgFunc().text}">
+      <router-link to="/" class="logo">PaperAirplane</router-link>
+      <input class="menu-btn" type="checkbox" id="menu-btn"/>
+      <label class="menu-icon" for="menu-btn">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu" :style="{background: BgFunc().background}">
+        <li><router-link to="/product" class="nav-link main">PRODUCT</router-link></li>
+        <li><router-link to="/howto" class="nav-link main">HOW TO</router-link></li>
+      </ul>
+    </header>
+  </div>
 </template>
 
 <script>
