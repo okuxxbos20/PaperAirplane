@@ -9,8 +9,8 @@
       </ul>
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
+        <li class="nav-item"><router-link to="/blog" class="nav-link sub">Blog</router-link></li>
         <li class="nav-item"><router-link to="/get-in-touch" class="nav-link sub">Get in touch</router-link></li>
-        <li class="nav-item"><router-link to="/support" class="nav-link sub">Support</router-link></li>
       </ul>
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
@@ -25,13 +25,25 @@
       <a href="https://www.instagram.com/paperairplane.jp/"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-gitlab"></i></a>
     </ul>
-    <toggle-button
+    <!-- <toggle-button
       @change="DarkMode()"
       color="#373737"
       class="switch"
-      :width="40"
+      :labels="{checked: icon.moon, unchecked: icon.sun}"
+      :width="60"
+      :height="30"
       :value="true"
-      :speed="250"/>
+      :speed="250"/> -->
+      <button
+        type="button"
+        name="button"
+        class="switch"
+        :style="style_switchbg()"
+        @click="DarkMode()"
+      >
+        <i class="far fa-moon moon" v-show="!r_isDark()"></i>
+        <i class="far fa-circle sun" v-show="r_isDark()"></i>
+      </button>
     <p class="copylight"><small lang="en">©2020 PaperAirplane Inc.</small></p>
   </div>
 </div>
@@ -46,7 +58,10 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    return { color, light, dark };
+    const icon = {
+      sun: 'SUN', moon: 'MOON'
+    };
+    return { color, light, dark, icon };
   },
   methods: {
     DarkMode: function() {
@@ -54,6 +69,12 @@ export default {
     },
     FooterTextFunc: function() {
       return !this.$store.getters.rtnIsDark ? this.light.footertext : this.dark.footertext;
+    },
+    r_isDark: function () {
+      return !this.$store.getters.rtnIsDark;
+    },
+    style_switchbg: function () {
+      return { background: this.r_isDark() ? '' : '#353535' };
     }
   }
 }
@@ -110,8 +131,25 @@ export default {
     }
   }
   .switch {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
     position: absolute;
     right: 1.7%;
+    bottom: 3.5%;
+    border: none;
+    border-radius: 50%;
+    transition: 0.5s;
+    &:focus {
+      outline: none;
+    }
+    .moon {
+      color: #eee;
+    }
+    .sun {
+      color: #353535;
+    }
   }
   .copylight {
     text-align: center;
