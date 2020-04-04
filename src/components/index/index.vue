@@ -12,7 +12,11 @@
           <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
           <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
         </div>
-        <p><code style="color: #19b5fe;">currently  v1.0.0</code></p>
+        <p>
+          <router-link to="/blog">
+            <code class="version">currently  v1.0.0</code>
+          </router-link>
+        </p>
       </div>
       <ClassCode @enterButtonClicked="enterButtonClicked" />
     </div>
@@ -48,7 +52,7 @@ export default {
       return window.innerHeight.toString() + 'px';
     },
     enterButtonClicked: function(classcode) {
-      console.log('ENTER BUTTON CLICKED:', classcode);
+      // console.log('ENTER BUTTON CLICKED:', classcode);
       this.$router.push('class');
     }
   }
@@ -104,6 +108,9 @@ export default {
       &:hover{
         transform:scale(1.025);
       }
+    }
+    .version {
+      color: var(--mainColor);
     }
   }
 }
