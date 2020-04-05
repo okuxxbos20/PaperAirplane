@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     BgFunc: function () {
-      return !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
+      return !this.$store.getters.g_isDark ? this.light.backGround : this.dark.backGround;
     }
   }
 };

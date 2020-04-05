@@ -44,8 +44,8 @@ export default {
       return Math.floor(Math.random() * this.subphrase.length);
     },
     colorFunc: function() {
-      var BackGround = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
-      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+      var BackGround = !this.$store.getters.g_isDark ? this.light.backGround : this.dark.backGround;
+      var text = !this.$store.getters.g_isDark ? this.light.text : this.dark.text;
       return { BackGround, text };
     },
     forIndexHeight: function() {

@@ -10,11 +10,22 @@
       </div>
 
       <div class="zone col-xs-8">
-        <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]">
-          <p class="msg" @click="showTime(idx)">{{ item.msg }}</p>
-          <p class="sent_time" v-show="item.status">{{ item.time }}
+        <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]" ref="scroll">
+          <p
+            class="msg"
+            @click="showTime(idx)"
+            :style="{ color: colorFunc().text, background: colorFunc().msgBg }"
+          >
+            {{ item.msg }}
+          </p>
+          <p
+            class="sent_time"
+            v-show="item.status"
+            :style="{ color: colorFunc().text }"
+          >
+            {{ item.time }}
             <i class="far fa-heart not_like" v-show="!item.liked" @click="msgLike(idx)">
-              <code class="likeCnt">{{ item.likeCnt }}</code>
+              <code class="likeCnt" :style="{ color: colorFunc().text }">{{ item.likeCnt }}</code>
             </i>
             <i class="fas fa-heart liked" v-show="item.liked" @click="msgLike(idx)">
               <code class="likeCnt">{{ item.likeCnt }}</code>
@@ -34,6 +45,9 @@ export default {
   name: 'ChatWindow',
   props: {},
   data () {
+    const color = this.$store.state.color;
+    const light = color.lightMode;
+    const dark = color.darkMode;
     var m = moment();
     var currentTime = m.format('H:mm');
     var msgArray = [{
@@ -62,6 +76,9 @@ export default {
         likeCnt: 0
       }];
     return {
+      color,
+      light,
+      dark,
       msgArray,
       currentTime,
       showInfo: false
@@ -94,6 +111,17 @@ export default {
         this.msgArray[idx].liked = false;
         return;
       }
+    },
+    colorFunc () {
+      var msgBg = !this.$store.getters.g_isDark ? this.light.paperBackGround : this.dark.paperBackGround;
+      var text = !this.$store.getters.g_isDark ? this.light.text : this.dark.text;
+      return { msgBg, text };
+    },
+    scrollToEnd() {
+      const chatLog = this.$refs.scroll;
+      if (!chatLog) {
+        return chatLog.scrollTop = chatLog.scrollHeight;
+      }
     }
   }
 }
@@ -102,7 +130,7 @@ export default {
 <style lang="scss" scoped>
 main {
   padding-top: 85px;
-  height: 1000px;
+  overflow: visible;
   .profile {
     margin-left: 10px;
     .profile-thumbnail {
@@ -117,9 +145,7 @@ main {
     .zone {
       width: 65%;
       .msg {
-        color: #111;
         font-size: 18px;
-        background: #eee;
         padding: 8px 15px;
         margin: 15px 0 0 0;
         border-radius: 0 20px 20px 20px;

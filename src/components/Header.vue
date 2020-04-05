@@ -26,8 +26,8 @@ export default {
   },
   methods: {
     BgFunc: function () {
-      var backGround = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
-      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+      var backGround = !this.$store.getters.g_isDark ? this.light.backGround : this.dark.backGround;
+      var text = !this.$store.getters.g_isDark ? this.light.text : this.dark.text;
       return { backGround, text };
     }
   }

@@ -46,12 +46,10 @@ const store = new Vuex.Store({
   },
   // mutaionsのみがsteteの更新を行うことができる.
   mutations: {
-    LightToDark (state) {
-      return state.isDark = !state.isDark ? true : false;
-    }
+    m_darkMode (state) { state.isDark = !state.isDark; }
   },
   getters: {
-    rtnIsDark: function(state) {
+    g_isDark (state) {
       return state.isDark;
     }
   },

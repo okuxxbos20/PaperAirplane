@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-  <div :class="{darka : this.$store.getters.rtnIsDark, lighta : !this.$store.getters.rtnIsDark}" :style="{color: FooterTextFunc()}">
+  <div :class="{darka : this.$store.getters.rtnIsDark, lighta : !this.$store.getters.rtnIsDark}" :style="{color: colorFunc()}">
     <ul class="nav justify-content-center mb-3">
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/product" class="nav-link main"><b>PRODUCT</b></router-link></li>
@@ -30,10 +30,10 @@
       name="button"
       class="switch"
       :style="style_switchbg()"
-      @click="DarkMode()"
+      @click="c_darkMode()"
     >
-      <i class="far fa-moon moon" v-show="!r_isDark()"></i>
-      <i class="far fa-lightbulb light" v-show="r_isDark()"></i>
+      <i class="far fa-moon moon" v-show="r_isDark()"></i>
+      <i class="far fa-lightbulb light" v-show="!r_isDark()"></i>
     </button>
     <p class="copylight"><small lang="en">©2020 PaperAirplane Inc.</small></p>
   </div>
@@ -49,24 +49,22 @@ export default {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    const icon = {
-      sun: 'SUN', moon: 'MOON'
-    };
-    return { color, light, dark, icon };
+    const isDark = this.$store.getters.g_isDark;
+    return { color, light, dark };
   },
   methods: {
-    DarkMode: function() {
-      this.$store.commit('LightToDark');
+    colorFunc () {
+      return !this.$store.getters.g_isDark ? this.light.footertext : this.dark.footertext;
     },
-    FooterTextFunc: function() {
-      return !this.$store.getters.rtnIsDark ? this.light.footertext : this.dark.footertext;
+    style_switchbg () {
+      return { background: this.r_isDark() ? '#353535' : '#fff' };
     },
-    r_isDark: function () {
-      return !this.$store.getters.rtnIsDark;
+    c_darkMode () {
+      this.$store.commit('m_darkMode');
     },
-    style_switchbg: function () {
-      return { background: this.r_isDark() ? '' : '#353535' };
-    }
+    r_isDark () {
+      return this.$store.getters.g_isDark;
+    },
   }
 }
 </script>
@@ -139,7 +137,7 @@ export default {
       color: #eee;
     }
     .light {
-      color: #777;
+      color: #353535;
     }
   }
   .copylight {

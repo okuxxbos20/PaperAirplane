@@ -16,6 +16,7 @@
       >
       <p class="class-code" style="display: inline-block"><code>@test01234</code></p>
     </div>
+
     <!-- overlay -->
     <div class="overlay" v-show="this.showInfo">
       <div
@@ -33,6 +34,7 @@
       </div>
     </div>
     <!-- overlay -->
+
   </header>
 </template>
 
@@ -53,11 +55,11 @@ export default {
   },
   methods: {
     chatHeaderInfo () {
-      this.showInfo = !this.showInfo ? true : false;
+      this.showInfo = !this.showInfo;
     },
     ColorFunc: function () {
-      var backGround = !this.$store.getters.rtnIsDark ? this.light.backGround : this.dark.backGround;
-      var text = !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+      var backGround = !this.$store.getters.g_isDark ? this.light.backGround : this.dark.backGround;
+      var text = !this.$store.getters.g_isDark ? this.light.text : this.dark.text;
       return { backGround, text };
     }
   }
@@ -70,9 +72,9 @@ header {
   width: 100%;
   border-bottom: 2px solid #eee;
   padding: 0 20px;
-  margin: 0;
+  margin: 0 auto;
   position: fixed;
-  background: #fff;
+  z-index: 100;
   .go-back {
     color: var(--mainColor);
     font-size: 20px;
@@ -145,7 +147,6 @@ header {
     .chat-thumbnail {
       margin: 5px 12.5px 10px;
     }
-    z-index: 99;
     position: fixed;
     top: 0%;
     left: 0;
