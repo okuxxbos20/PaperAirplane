@@ -36,11 +36,11 @@ export const routes = [{
     component: AboutusComp,
     name:'aboutus'
   },{
-    path: '/get-in-touch',
+    path: '/aboutus/get-in-touch',
     component: GetInTouchComp,
     name:'get-in-touch'
   },{
-    path: '/blog',
+    path: '/aboutus/blog',
     component: BlogComp,
     name:'blog'
   },{
