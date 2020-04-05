@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <header :style="{background: BgFunc().backGround, color: BgFunc().text}">
-      <router-link to="/" class="logo">PaperAirplane</router-link>
-      <input class="menu-btn" type="checkbox" id="menu-btn"/>
-      <label class="menu-icon" for="menu-btn">
-        <span class="nav-icon"></span>
-      </label>
-      <ul class="menu" :style="{background: BgFunc().background}">
-        <li><router-link to="/product" class="nav-link main">PRODUCT</router-link></li>
-        <li><router-link to="/howto" class="nav-link main">HOW TO</router-link></li>
-      </ul>
-    </header>
-  </div>
+  <header :style="{ background: BgFunc().backGround }">
+    <router-link to="/" class="logo">PaperAirplane</router-link>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn">
+      <span class="nav-icon"></span>
+    </label>
+    <ul class="dropdown" :style="{ background: BgFunc().backGround, color: BgFunc().text }">
+      <li><router-link to="/product" class="nav-link">Product</router-link></li>
+      <li><router-link to="/aboutus/blog" class="nav-link">Blog</router-link></li>
+      <li><router-link to="/aboutus/get-in-touch" class="nav-link">Get in touch</router-link></li>
+    </ul>
+  </header>
 </template>
 
 <script>
@@ -41,30 +40,6 @@ header {
   height: 67.5px;
   width: 100%;
   z-index: 3;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-  }
-  li a {
-    display: block;
-    padding: 18px 30px;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    transition: .15s;
-    &:hover {
-      color: var(--mainColor);
-      transform: scale(1.015);
-    }
-    .menu-btn {
-      &:hover {
-        color: var(--mainColor);
-        transform: scale(1.015);
-      }
-    }
-  }
   .logo {
     color: var(--mainColor);
     display: inline-block;
@@ -75,10 +50,24 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
   }
-  .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .4s;
+  .menu-btn {
+    display: none;
+    &:checked ~ .dropdown {
+      max-height: 240px;
+    }
+    &:checked ~ .menu-icon .nav-icon {
+      background: transparent;
+    }
+    &:checked ~ .menu-icon .nav-icon {
+      &:before {
+        transform: rotate(-45deg);
+        top:0;
+      }
+      &:after {
+        transform: rotate(45deg);
+        top:0;
+      }
+    }
   }
   .menu-icon {
     cursor: pointer;
@@ -113,38 +102,24 @@ header {
       }
     }
   }
-  .menu-btn {
-    display: none;
-    &:checked ~ .menu {
-      max-height: 240px;
-    }
-    &:checked ~ .menu-icon .nav-icon {
-      background: transparent;
-    }
-    &:checked ~ .menu-icon .nav-icon {
-      &:before {
-        transform: rotate(-45deg);
-        top:0;
+  .dropdown {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: .4s;
+    .nav-link {
+      color: var(--mainColor);
+      padding: 18px 30px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      transition: .15s;
+      &:hover {
+        color: var(--mainColor);
+        transform: scale(1.015);
       }
-      &:after {
-        transform: rotate(45deg);
-        top:0;
-      }
-    }
-  }
-}
-
-@media (min-width: 100em) {
-  header {
-    li {
-      float: left;
-    }
-    li a {
-      padding: 20px 20px;
-      margin: 0;
-    }
-    .menu-icon {
-      display: none;
     }
   }
 }
