@@ -25,25 +25,16 @@
       <a href="https://www.instagram.com/paperairplane.jp/"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-gitlab"></i></a>
     </ul>
-    <!-- <toggle-button
-      @change="DarkMode()"
-      color="#373737"
+    <button
+      type="button"
+      name="button"
       class="switch"
-      :labels="{checked: icon.moon, unchecked: icon.sun}"
-      :width="60"
-      :height="30"
-      :value="true"
-      :speed="250"/> -->
-      <button
-        type="button"
-        name="button"
-        class="switch"
-        :style="style_switchbg()"
-        @click="DarkMode()"
-      >
-        <i class="far fa-moon moon" v-show="!r_isDark()"></i>
-        <i class="far fa-circle sun" v-show="r_isDark()"></i>
-      </button>
+      :style="style_switchbg()"
+      @click="DarkMode()"
+    >
+      <i class="far fa-moon moon" v-show="!r_isDark()"></i>
+      <i class="far fa-lightbulb light" v-show="r_isDark()"></i>
+    </button>
     <p class="copylight"><small lang="en">©2020 PaperAirplane Inc.</small></p>
   </div>
 </div>
@@ -134,10 +125,10 @@ export default {
     font-size: 18px;
     width: 40px;
     height: 40px;
-    padding: 2px;
+    padding: 3px;
     position: absolute;
-    right: 1.7%;
-    bottom: 3.5%;
+    right: 1.8%;
+    bottom: 5%;
     border: none;
     border-radius: 50%;
     transition: 0.5s;
@@ -147,8 +138,8 @@ export default {
     .moon {
       color: #eee;
     }
-    .sun {
-      color: #353535;
+    .light {
+      color: #777;
     }
   }
   .copylight {
