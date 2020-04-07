@@ -14,18 +14,19 @@
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
   name: 'ChatTextArea',
-  props: {},
   data () {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    return { color, light, dark };
+    var currentTime = moment().format('H:mm');
+    return { color, light, dark, currentTime };
   },
   methods: {
     sendText (text) {
-      var len = this.msgArray.length;
       var item = {
         msg: text,
         time: this.currentTime,
@@ -33,8 +34,7 @@ export default {
         liked: false,
         likeCnt: 0
       };
-      this.msgArray[len-1].status = false;
-      this.msgArray.push(item);
+      this.$emit('sendText', item);
     },
     ColorFunc: function () {
       var backGround = !this.$store.getters.g_isDark ? this.light.backGround : this.dark.backGround;
