@@ -2,11 +2,11 @@
 https://paperairplane.jp/
 Coming soon.
 
-## set uo
+## set up
 ```
 $ npm install
 ```
 
 ```
-$ npm run  serve
+$ npm run serve
 ```
