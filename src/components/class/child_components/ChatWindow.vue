@@ -1,7 +1,7 @@
 <template>
   <main
     class="container"
-    :class="{ blur_place: this.showInfo }"
+    :class="{ blur_place: isBlur }"
   >
     <div class="person row">
 
@@ -10,10 +10,10 @@
       </div>
 
       <div class="zone col-xs-8">
-        <div class="" v-for="(item, idx) in this.msgArray" :key="item[idx]" ref="scroll">
+        <div v-for="(item, idx) in msgArray" :key="item[idx]" ref="scroll">
           <p
             class="msg"
-            @click="showTime(idx)"
+            @click="showDetail(idx)"
             :style="{ color: colorFunc().text, background: colorFunc().msgBg }"
           >
             {{ item.msg }}
@@ -39,65 +39,28 @@
 </template>
 
 <script>
-import moment from "moment";
-
 export default {
   name: 'ChatWindow',
-  props: {},
+  props: {
+    isBlur: {
+      type: Boolean,
+      default: false
+    },
+    msgArray: {
+      type: Array
+    },
+    currentTime: {
+      type: String
+    }
+  },
   data () {
     const color = this.$store.state.color;
     const light = color.lightMode;
     const dark = color.darkMode;
-    var m = moment();
-    var currentTime = m.format('H:mm');
-    var msgArray = [{
-        msg: 'Welcome to the PaperAirplane!',
-        time: currentTime,
-        status: false,
-        liked: true,
-        likeCnt: 21
-      },{
-        msg: 'This is chat window. And as you know, it is prototype yet. Coming soon.',
-        time: currentTime,
-        status: false,
-        liked: false,
-        likeCnt: 0
-      },{
-        msg: 'And if you wanna get-in-touch with us, plz send DM!',
-        time: currentTime,
-        status: false,
-        liked: false,
-        likeCnt: 0
-      },{
-        msg: 'Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.',
-        time: currentTime,
-        status: true,
-        liked: false,
-        likeCnt: 0
-      }];
-    return {
-      color,
-      light,
-      dark,
-      msgArray,
-      currentTime,
-      showInfo: false
-    };
+    return { color, light, dark };
   },
   methods: {
-    sendText (text) {
-      var len = this.msgArray.length;
-      var item = {
-        msg: text,
-        time: this.currentTime,
-        status: true,
-        liked: false,
-        likeCnt: 0
-      };
-      this.msgArray[len-1].status = false;
-      this.msgArray.push(item);
-    },
-    showTime (idx) {
+    showDetail (idx) {
       this.msgArray[idx].status = !this.msgArray[idx].status ? true : false;
     },
     msgLike (idx) {
@@ -187,5 +150,8 @@ main {
       }
     }
   }
+}
+.blur_place {
+  filter: blur(1.5px);
 }
 </style>
