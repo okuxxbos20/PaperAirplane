@@ -1,16 +1,16 @@
-<template :style="{background: colorFunc().BackGround}">
+<template :style="{ background: colorFunc().BackGround }">
   <div
-    class="index container"
-    :style="{color: colorFunc().text, height: forIndexHeight()}"
+    class="index"
+    :style="{ color: colorFunc().text, height: forIndexHeight() }"
   >
-    <div class="main">
+    <main>
       <div class="howtoAndInstall">
         <img src="../../assets/logo_deepSkyBlue.svg" alt="logo">
         <h1 class="title"><b>PaperAirplane</b></h1>
         <h6 class="subtitle">{{ subphrase[subPhrase()] }}</h6>
-        <div class="row justify-content-center btn-parent">
-          <router-link to="/" class="btn btn-install col-md-3 mb-2">INSTALL</router-link>
-          <router-link to="/howto" class="btn btn-howto col-md-3 mb-2">HOW TO</router-link>
+        <div class="btn_parent row justify-content-center">
+          <router-link to="/" class="btn btn_install col-md-3">INSTALL</router-link>
+          <router-link to="/howto" class="btn btn_howto col-md-3">HOW TO</router-link>
         </div>
         <p>
           <router-link to="/blog">
@@ -19,7 +19,7 @@
         </p>
       </div>
       <ClassCode @enterButtonClicked="enterButtonClicked" />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -52,7 +52,7 @@ export default {
       return window.innerHeight.toString() + 'px';
     },
     enterButtonClicked: function(classcode) {
-      // console.log('ENTER BUTTON CLICKED:', classcode);
+      console.log(`ENTER BUTTON CLICKED: ${classcode}`);
       this.$router.push('class');
     }
   }
@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .index {
   text-align: center;
-  .main {
+  main {
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -85,29 +85,25 @@ export default {
       font-size: 17px;
       font-weight: bold;
     }
-    .btn-parent {
+    .btn_parent {
       width: 70%;
       margin: 0 auto;
     }
-    .btn-howto {
+    .btn_howto {
       background: #19b5fe;
       color: var(--white);
       border-radius: 17px;
       transition: 0.3s;
       margin: 5px;
-      &:hover{
-        transform:scale(1.025);
-      }
+      &:hover{ transform:scale(1.025); }
     }
-    .btn-install {
+    .btn_install {
       background: #3bb4c1;
       color: var(--white);
       border-radius: 17px;
       transition: 0.3s;
       margin: 5px;
-      &:hover{
-        transform:scale(1.025);
-      }
+      &:hover{ transform:scale(1.025); }
     }
     .version {
       color: var(--mainColor);
