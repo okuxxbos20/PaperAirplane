@@ -6,7 +6,11 @@
     <div class="person row">
 
       <div class="profile col-xs-1">
-        <img src="../../../assets/okuicon.jpg" alt="logo" class="profile-thumbnail">
+        <img
+          src="../../../assets/okuicon.jpg"
+          alt="profile"
+          class="profile-thumbnail"
+        >
       </div>
 
       <div class="zone col-xs-8">
@@ -92,16 +96,19 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  padding-top: 85px;
+  padding: 85px 0 69px;
   overflow: visible;
   .profile {
     margin-left: 10px;
     .profile-thumbnail {
       width: 40px;
       height: 40px;
+      margin: 0 15px 0 20px;
       border-radius: 50%;
       border: none;
-      margin: 0 15px 0 20px;
+    }
+    img {
+      object-position: bottom;
     }
   }
   .person {
