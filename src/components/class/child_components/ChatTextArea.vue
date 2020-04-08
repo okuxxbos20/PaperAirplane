@@ -7,7 +7,7 @@
       class="user_input"
       type="text"
       placeholder="Aa"
-      @change="sendText($event.target.value)"
+      @keyup.enter="sendText($event.target.value)"
       :style="{ color: ColorFunc().text, background: ColorFunc().backGround }"
     >
   </div>
