@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     colorFunc: function () {
-       return !this.$store.getters.rtnIsDark ? this.light.text : this.dark.text;
+       return !this.$store.getters.g_isDark ? this.light.text : this.dark.text;
     }
   }
 };
