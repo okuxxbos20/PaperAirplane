@@ -13,7 +13,7 @@
           <router-link to="/howto" class="btn btn_howto col-md-3">HOW TO</router-link>
         </div>
         <p>
-          <router-link to="/blog">
+          <router-link to="/aboutus/blog">
             <code class="version">currently  v1.0.0</code>
           </router-link>
         </p>
