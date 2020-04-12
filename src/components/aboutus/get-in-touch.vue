@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <Header/>
-    <PageTitle title="GET IN TOUCH"/>
+    <PageTitle title="Release note"/>
     <div class="container">
       <p>get in touch contents below</p>
     </div>

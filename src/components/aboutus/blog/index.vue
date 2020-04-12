@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <Header/>
-    <PageTitle title="BLOG"/>
+    <PageTitle title="BLOG_TOP"/>
     <div class="container">
       <p>support contents below</p>
     </div>
@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
-import Footer from '../Footer.vue';
-import PageTitle from './../child_components/pagetitle.vue';
+import Header from '../../Header.vue';
+import Footer from '../../Footer.vue';
+import PageTitle from './../../child_components/pagetitle.vue';
 
 export default {
   components: { Header, Footer, PageTitle }
