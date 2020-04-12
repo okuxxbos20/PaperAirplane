@@ -6,7 +6,7 @@ import ProductAudienceComp from './components/product/audience';
 //aboutus
 import AboutusComp from './components/aboutus/';
 import GetInTouchComp from './components/aboutus/get-in-touch';
-import BlogComp from './components/aboutus/blog';
+import BlogComp from './components/aboutus/blog/';
 //howto
 import HowtoComp from './components/howto/';
 import TermsComp from './components/howto/terms';
@@ -40,7 +40,7 @@ export const routes = [{
     component: GetInTouchComp,
     name:'get-in-touch'
   },{
-    path: '/aboutus/blog',
+    path: '/aboutus/blog/',
     component: BlogComp,
     name:'blog'
   },{
