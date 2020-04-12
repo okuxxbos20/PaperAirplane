@@ -9,8 +9,8 @@
       </ul>
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/aboutus" class="nav-link main"><b>ABOUT US</b></router-link></li>
-        <li class="nav-item"><router-link to="/blog" class="nav-link sub">Blog</router-link></li>
-        <li class="nav-item"><router-link to="/get-in-touch" class="nav-link sub">Get in touch</router-link></li>
+        <li class="nav-item"><router-link to="/aboutus/blog" class="nav-link sub">Blog</router-link></li>
+        <li class="nav-item"><router-link to="/aboutus/get-in-touch" class="nav-link sub">Release note</router-link></li>
       </ul>
       <ul class="parent nav flex-column col-md-2 col-xs-1">
         <li class="nav-item"><router-link to="/howto" class="nav-link main"><b>HOW TO</b></router-link></li>
@@ -132,6 +132,9 @@ export default {
     transition: 0.5s;
     &:focus {
       outline: none;
+    }
+    &:hover {
+      transform: scale(1.2);
     }
     .moon {
       color: #eee;
